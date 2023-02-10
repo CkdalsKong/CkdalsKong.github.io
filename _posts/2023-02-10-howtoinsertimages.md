@@ -21,7 +21,10 @@ title: 깃허브 블로그에 이미지 올리는 방법
 ## 이미지가 깨질때
 
 - visual studio code에서 repository가 저장된 폴더를 열고, 이미지가 추가된 md 파일을 연다.
+
 - 이미지의 경로를 {{site.url}}/images/.. 으로 설정하여 준다.
+
+  ->  {{site.url}} 은 site의 url 변수에 접근하는 것
 
 # 끝!
 
