@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 깃허브 블로그에 이미지 올리는 방법
 ---
 
