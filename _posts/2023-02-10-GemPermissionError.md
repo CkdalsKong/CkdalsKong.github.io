@@ -9,7 +9,7 @@ title: Gem::FilePermissionError 해결 방법
 
 설치 가능한 Ruby 버전 확인하고 최신 버전 설치하기
 
-![gempermission]({{site.url}}/images/2023-02-10-GemPermissionError/스크린샷 2023-02-10 오후 6.17.39.png)
+![gempermission]({{site.url}}/images/2023-02-10-GemPermissionError/gempermission.png)
 
 `rbenv install 3.2.0`
 
