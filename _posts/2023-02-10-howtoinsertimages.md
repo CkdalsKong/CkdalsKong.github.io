@@ -3,6 +3,7 @@ layout: single
 title: 깃허브 블로그에 이미지 올리는 방법
 categories: github-blog
 tag: [blog, jekyll]
+toc: true
 ---
 
 ## 1. typora
