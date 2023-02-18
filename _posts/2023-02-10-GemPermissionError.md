@@ -1,6 +1,7 @@
 ---
 layer: single
 title: Gem::FilePermissionError 해결 방법
+categories: github blog
 ---
 
 ###  1. ruby 버전 확인 및 재설치
