@@ -1,7 +1,7 @@
 ---
 layout: single
 title: 깃허브 블로그에 이미지 올리는 방법
-categories: github blog
+categories: github-blog
 ---
 
 ## 1. typora

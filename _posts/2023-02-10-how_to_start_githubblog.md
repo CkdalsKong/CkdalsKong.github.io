@@ -1,7 +1,7 @@
 ---
 layout: single
 title: 깃허브 블로그 간단히 만들기
-categories: github blog
+categories: github-blog
 ---
 
 ## 1. 원하는 테마 찾기

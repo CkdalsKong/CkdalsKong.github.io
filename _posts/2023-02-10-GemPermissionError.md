@@ -1,7 +1,7 @@
 ---
 layer: single
 title: Gem::FilePermissionError 해결 방법
-categories: github blog
+categories: github-blog
 tag: error
 ---
 
