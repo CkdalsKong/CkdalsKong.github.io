@@ -8,12 +8,12 @@ main:
     url: /search/
 
 docs:
-  - title: "카테고리 및 태그"
+  - title: "카테고리"
     children:
-      - title: "Category"
-        url: /categories/
-      - title: "Tag"
-        url: /tags/
+      - title: "github blog"
+        url: /categories/github-blog
+      # - title: "Tag"
+      #   url: /tags/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
