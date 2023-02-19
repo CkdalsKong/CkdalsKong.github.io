@@ -9,7 +9,7 @@ sidebar:
     nav: "docs"
 ---
 
-+ minimal-mistakes 테마를 사용하고 있으므로 [minimal-mistakes 홈페이지](https:// mmistakes.github.io/minimal-mistakes/docs/configuration/)에 방문하여 Configuration 목차에서 원하는 항목 변경해보기
++ minimal-mistakes 테마를 사용하고 있으므로 [minimal-mistakes 홈페이지](https://mmistakes.github.io/minimal-mistakes/docs/configuration/)에 방문하여 Configuration 목차에서 원하는 항목 변경해보기
 
 
 
@@ -23,26 +23,24 @@ minimal_mistakes_skin    : "mint"
 
 
 
-
 ### 2. Site settings 변경
 
 - locale : "ko-KR"로 변경하기 (Site Author에서도 변경)
 - title : 원하는 사이트의 제목으로 변경하기
-- title_separator : 사이트에서 페이지 이동하였을때 페이 경로를 나누어주는 역할으로 "|" 으로 설정
+- title_separator : 사이트에서 페이지 이동하였을때 페이지 경로를 나누어주는 역할으로 " \| " 으로 설정
 - subtitle : 원하는 tagline 넣기 
 - name : 원하는 이름 넣기 (Site Author에서도 변경)
 - discription : 블로그에 대한 설명 넣기 (Site Author에서도 변경 /*bio)
 
 ```yaml
 locale                   : "ko-KR"
-title                    : "CMK Blog"
+title                    : "사이트 이름"
 title_separator          : "|"
-subtitle                 : "Time waits for no one."
-name                     : "CMKong"
-description              : "CMKong의 블로그입니다."
-url                      : "https://CkdalsKong.github.io"
+subtitle                 : "tagline"
+name                     : "이름"
+description              : "블로그 설명"
+url                      : "https://깃헙아이디.github.io"
 ```
-
 
 
 
@@ -54,7 +52,7 @@ url                      : "https://CkdalsKong.github.io"
   "/assets/images/로고이미지"
 
 ```yaml
-logo                     : "/assets/images/logo_by_YMK.jpg"
+logo                     : "/assets/images/이미지파일명.확장자"
 ```
 
 
