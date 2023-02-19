@@ -4,6 +4,9 @@ title: Gem::FilePermissionError 해결 방법
 categories: github-blog
 tag: error
 toc: true
+author_profile: false
+sidebar:
+    nav: "docs"
 ---
 
 ###  1. ruby 버전 확인 및 재설치
@@ -28,7 +31,7 @@ rbenv 3.2.0 버전이 설치되었는지 확인하고, 버전을 변경한다.
 
 i 눌러서 <insert>모드로 변경 후 명령어 추가
 
-```bash
+```sh
 [[ -d ~/.rbenv  ]] && \
   export PATH=${HOME}/.rbenv/bin:${PATH} && \
   eval "$(rbenv init -)"
@@ -38,7 +41,7 @@ ESC 누르면 normal 모드로 변경된다.
 
 `:wq`로 저장 후 종료한다.
 
-```
+```sh
 :q	// 종료
 :w	// 저장
 :wq	// 저장 후 종료

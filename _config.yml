@@ -259,4 +259,5 @@ defaults:
       comments: true
       share: true
       related: true
-      show_date: ture
+      show_date: true
+date_format: "%Y-%m-%d"
