@@ -75,15 +75,19 @@ breadcrumbs              : true
   - show_date 추가한 위치 밑에 아무런 포함관계 없이 date_format 옵션 추가해 주기
   - "%Y-%m-%d" 연 - 월 - 일 의 순서이며 원하는 순서로 변경하기
   
-  ```yaml
-  defaults:
-    - scope:
-        path: ""
-        type: posts
-      values:
-        show_date: true
-  
-  date_format: "%Y-%m-%d"
-  ```
-  
-  
+
+```yaml
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      show_date: true
+
+date_format: "%Y-%m-%d"
+```
+
+
+
+
+
