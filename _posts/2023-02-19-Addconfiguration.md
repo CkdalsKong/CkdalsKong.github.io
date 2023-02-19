@@ -89,5 +89,39 @@ date_format: "%Y-%m-%d"
 
 
 
+### 6. SNS 링크 넣기
+
++ _config.yml 에서 Site Author 항목에 links가 있는데 여기에 원하는 SNS 링크를 넣으면 된다.
+
+```yaml
+author:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "깃헙 주소"
+```
+
++ Site Footer에서도 원하는 SNS를 추가한다.
+
+```yaml
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "깃헙 주소"
+```
 
 
+
+### 7. Outputting 설정
+
+- Paginate 설정
+  - 한 페이지에서 몇개의 게시물이 보일 것인지 설정하는 것
+
++ timezone 설정
+
+```yaml
+# Outputting
+paginate: 5 # amount of posts to show
+timezone: Asia/Seoul
+```
