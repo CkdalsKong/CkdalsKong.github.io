@@ -5,6 +5,8 @@ categories: github-blog
 tag: [blog, jekyll]
 toc: true
 author_profile: false
+sidebar:
+    nav: "docs"
 ---
 
 ## 1. typora
