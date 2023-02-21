@@ -1,6 +1,6 @@
 ---
 layer: single
-title: "4. Disqus에서 깃헙 블로그에 댓글 기능 추가하기"
+title: "4 - Disqus에서 깃헙 블로그에 댓글 기능 추가하기"
 categories: github-blog
 tag: comment
 toc: true

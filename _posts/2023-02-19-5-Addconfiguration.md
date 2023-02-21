@@ -1,6 +1,6 @@
 ---
 layer: single
-title: "5. _config.yml에서 블로그 설정 간단하게 변경하기"
+title: "5 - _config.yml에서 블로그 설정 간단하게 변경하기"
 categories: github-blog
 tag: _config.yml
 toc: true

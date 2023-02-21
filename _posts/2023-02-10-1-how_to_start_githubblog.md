@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "1. 깃허브 블로그 간단히 만들기"
+title: "1 - 깃허브 블로그 간단히 만들기"
 categories: github-blog
 tag: [blog, jekyll]
 toc: true
