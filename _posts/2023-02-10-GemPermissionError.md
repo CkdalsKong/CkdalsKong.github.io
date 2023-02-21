@@ -1,6 +1,6 @@
 ---
 layer: single
-title: Gem::FilePermissionError 해결 방법
+title: 3-1. Gem::FilePermissionError 해결 방법
 categories: github-blog
 tag: error
 toc: true

@@ -1,6 +1,6 @@
 ---
 layer: single
-title: 깃헙 블로그에 카테고리, 태그 및 검색 기능 추가하기
+title: 6. 깃헙 블로그에 카테고리, 태그 및 검색 기능 추가하기
 categories: github-blog
 tag: [category, tag, search]
 toc: true
