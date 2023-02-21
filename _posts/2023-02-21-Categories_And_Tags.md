@@ -9,7 +9,7 @@ sidebar:
     nav: "docs"
 ---
 
-### 준비 과정
+## 준비 과정
 
 #### _config.yml 파일 설정
 
@@ -36,7 +36,9 @@ jekyll-archives:
 
 
 
-### Category 추가하기
+
+
+## Category 추가하기
 
 #### 1. _pages 폴더
 
@@ -74,7 +76,9 @@ categories:
 
 
 
-### **Tag 추가하기**
+
+
+## **Tag 추가하기**
 
 #### 1. _pages 폴더
 
@@ -117,7 +121,9 @@ tag:
 
 
 
-### **검색기능 추가하기**
+
+
+## **검색기능 추가하기**
 
 #### 1. _pages 폴더
 
