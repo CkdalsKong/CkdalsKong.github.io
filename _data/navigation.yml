@@ -1,0 +1,27 @@
+main:
+  - title: "Home"
+    url: "/#home"
+
+  - title: "About"
+    url: "/#about"
+
+  - title: "Research"
+    url: "/#research"
+
+  - title: "Publications"
+    url: "/#publications"
+
+  - title: "Projects"
+    url: "/#projects"
+
+  - title: "Honors"
+    url: "/#honors"
+
+  - title: "Experience"
+    url: "/#experience"
+
+  - title: "Contact"
+    url: "/#contact"
+
+  - title: "CV"
+    url: "/files/CV.pdf"
