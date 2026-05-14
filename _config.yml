@@ -15,7 +15,7 @@ name                     : &name "Changmin Lee"
 description              : &description "Personal website of Changmin Lee — MS-PhD Student in Computer Science and Engineering at UNIST"
 url                      : https://changmin-lee.com
 baseurl                  : ""
-repository               : "CkdalsKong/github.io"
+repository               : "CkdalsKong/CkdalsKong.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
