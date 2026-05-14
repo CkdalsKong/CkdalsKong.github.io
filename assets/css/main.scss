@@ -46,10 +46,11 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ===== Section base ===== */
 .home-section {
   scroll-margin-top: 90px;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
   border-bottom: 1px solid #eee;
 
   &:last-child {
@@ -59,14 +60,273 @@ html {
   h2 {
     margin-top: 0;
     font-size: 1.6rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 3px solid var(--global-base-color, #2f7f93);
+    display: inline-block;
+    margin-bottom: 1.2rem;
   }
 
   h3 {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     margin-top: 1.2rem;
   }
 
   ul {
     margin-top: 0.5rem;
+  }
+}
+
+/* ===== Hero section ===== */
+.hero-section {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+  color: #fff;
+  padding: 3.5rem 1.5rem 3rem !important;
+  border-bottom: none !important;
+  border-radius: 0 0 1.2rem 1.2rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(82, 173, 200, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+    margin-bottom: 0.3rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.85;
+    margin-bottom: 1rem;
+
+    strong {
+      color: #52adc8;
+    }
+  }
+
+  .typed-wrapper {
+    font-size: 1.05rem;
+    opacity: 0.9;
+    min-height: 1.6em;
+  }
+}
+
+/* ===== Typing animation ===== */
+.typed-cursor {
+  animation: blink-caret 0.75s step-end infinite;
+  font-weight: 100;
+  color: #52adc8;
+}
+
+@keyframes blink-caret {
+  from, to { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ===== Research tags ===== */
+.research-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.research-tag {
+  display: inline-block;
+  padding: 0.45rem 1rem;
+  background: linear-gradient(135deg, #e8f4f8, #d1ecf1);
+  color: #0c5460;
+  border-radius: 50px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  cursor: default;
+
+  &:hover {
+    background: linear-gradient(135deg, #52adc8, #2f7f93);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(47, 127, 147, 0.3);
+  }
+}
+
+/* ===== Publication cards ===== */
+.pub-card {
+  background: #fafbfc;
+  border: 1px solid #e8ecef;
+  border-radius: 10px;
+  padding: 1.2rem 1.4rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border-color: #d1ecf1;
+  }
+
+  .pub-title {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    color: var(--global-text-color, #333);
+  }
+
+  .pub-authors {
+    font-size: 0.9rem;
+    color: #6c757d;
+  }
+}
+
+.venue-badge {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  margin-bottom: 0.5rem;
+  background: #e3edf3;
+  color: #2f7f93;
+}
+
+.venue-top {
+  background: linear-gradient(135deg, #e8453c, #d63031);
+  color: #fff;
+}
+
+/* ===== Project cards ===== */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.project-card {
+  background: #fafbfc;
+  border: 1px solid #e8ecef;
+  border-radius: 10px;
+  padding: 1.3rem 1.4rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border-color: #52adc8;
+  }
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0.4rem;
+    font-size: 1.05rem;
+    color: var(--global-base-color, #2f7f93);
+  }
+
+  p {
+    font-size: 0.92rem;
+    color: #6c757d;
+    margin-bottom: 0;
+  }
+}
+
+/* ===== Timeline ===== */
+.timeline {
+  position: relative;
+  padding-left: 1.8rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 4px;
+    bottom: 4px;
+    width: 2px;
+    background: linear-gradient(to bottom, #52adc8, #d1ecf1);
+    border-radius: 2px;
+  }
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 1.1rem;
+  padding-left: 0.6rem;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -1.75rem;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border: 3px solid #52adc8;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-content {
+  font-size: 0.95rem;
+
+  strong {
+    color: var(--global-text-color, #333);
+  }
+}
+
+/* ===== Scroll animation ===== */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+[data-animate].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Dark theme adjustments ===== */
+@media (prefers-color-scheme: dark) {
+  .research-tag {
+    background: linear-gradient(135deg, #1a3a4a, #1e4d5e);
+    color: #a8dadc;
+
+    &:hover {
+      background: linear-gradient(135deg, #52adc8, #2f7f93);
+      color: #fff;
+    }
+  }
+
+  .pub-card,
+  .project-card {
+    background: #1a1a2e;
+    border-color: #2a2a4a;
+
+    &:hover {
+      border-color: #52adc8;
+    }
+  }
+
+  .venue-badge {
+    background: #1e4d5e;
+    color: #a8dadc;
+  }
+
+  .timeline-dot {
+    background: #1a1a2e;
   }
 }
