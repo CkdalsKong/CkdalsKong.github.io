@@ -8,34 +8,22 @@ redirect_from:
 ---
 
 <section id="home" class="home-section hero-section">
-  <div class="hero-content">
-    <h1>Changmin Lee</h1>
-    <p class="hero-subtitle">AI Research Engineer | MS-PhD Student at <strong>UNIST</strong></p>
-    <p class="typed-wrapper">
-      I work on <span class="typed-text"></span><span class="typed-cursor">|</span>
-    </p>
-    <div class="quick-links">
-      <a class="btn-link" href="mailto:lchm1106@unist.ac.kr">Email</a>
-      <a class="btn-link" href="https://github.com/CkdalsKong" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a class="btn-link" href="https://www.linkedin.com/in/changmin0lee/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a class="btn-link" href="https://arxiv.org/abs/2605.18271" target="_blank" rel="noopener noreferrer">arXiv</a>
-      <a class="btn-link" href="/files/CV.pdf">CV</a>
+  <div class="hero-inner">
+    <img class="hero-photo" src="/images/profile.png" alt="Changmin Lee" width="140" height="140"/>
+    <div class="hero-content">
+      <h1>Changmin Lee</h1>
+      <p class="hero-subtitle">AI Research Engineer | M.S.-Ph.D. Student at <strong>UNIST</strong></p>
+      <p class="typed-wrapper">
+        I work on <span class="typed-text"></span><span class="typed-cursor">|</span>
+      </p>
+      <div class="quick-links">
+        <a class="btn-link" href="mailto:lchm1106@unist.ac.kr">Email</a>
+        <a class="btn-link" href="https://github.com/CkdalsKong" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="btn-link" href="https://www.linkedin.com/in/changmin0lee/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="btn-link" href="https://arxiv.org/abs/2605.18271" target="_blank" rel="noopener noreferrer">arXiv</a>
+        <a class="btn-link" href="/files/CV.pdf">CV</a>
+      </div>
     </div>
-  </div>
-</section>
-
-<section class="home-section metric-strip" data-animate>
-  <div class="metric-item">
-    <div class="metric-value">2,404x</div>
-    <div class="metric-label">less indexing memory (EPIC)</div>
-  </div>
-  <div class="metric-item">
-    <div class="metric-value">+20.17pp</div>
-    <div class="metric-label">preference-following accuracy</div>
-  </div>
-  <div class="metric-item">
-    <div class="metric-value">29.35ms</div>
-    <div class="metric-label">query latency on-device</div>
   </div>
 </section>
 
@@ -44,7 +32,7 @@ redirect_from:
   <div class="news-list">
     <div class="news-item">
       <span class="news-date">2026.05</span>
-      <span class="news-text">Our paper <strong>"From Volume to Value: Preference-Aligned Memory Construction for On-Device RAG"</strong> was accepted to <strong>ICML 2026</strong>.</span>
+      <span class="news-text">My paper <strong>"From Volume to Value: Preference-Aligned Memory Construction for On-Device RAG"</strong> was accepted to <strong>ICML 2026</strong>.</span>
     </div>
     <div class="news-item">
       <span class="news-date">2025.08 - 2026.09</span>
@@ -56,7 +44,8 @@ redirect_from:
 <section id="research" class="home-section" data-animate>
   <h2>About & Research</h2>
   <p>
-    I am a graduate researcher at UAI Lab, UNIST, advised by Prof. Taesik Gong. I focus on personalized and efficient AI systems that can run under strict memory and latency constraints.
+    I am an M.S.-Ph.D. student in Computer Science and Engineering at UNIST, UAI Lab, advised by Prof. Taesik Gong.
+    I focus on personalized and efficient AI systems for resource-constrained environments.
   </p>
   <div class="research-tags">
     <span class="research-tag">Personalized AI</span>
@@ -106,8 +95,15 @@ redirect_from:
     </div>
     <button class="pub-abstract-toggle" type="button" data-target="abs-epic">Show Abstract</button>
     <div class="pub-abstract" id="abs-epic">
-      We propose EPIC, a preference-aligned memory construction framework for on-device RAG. Across four benchmarks, EPIC reduces indexing memory by 2,404x, improves preference-following accuracy by 20.17 points, and achieves 33.33x lower retrieval latency over strong baselines.
+      We propose EPIC, a preference-aligned memory construction framework for on-device RAG that selectively retains preference-relevant information and aligns retrieval toward user preferences under tight memory budgets.
     </div>
+  </div>
+
+  <div class="pub-card">
+    <span class="venue-badge venue-workshop">Preprint (Under Preparation)</span>
+    <div class="pub-title">Transition-Level Memory for GUI Agents</div>
+    <div class="pub-authors"><u>Changmin Lee</u>, Taehwan Park, Jongwon Lee, Taesik Gong</div>
+    <div class="pub-note">Transition-aware compact memory construction for mobile GUI agents.</div>
   </div>
 
   <div class="pub-card">
@@ -117,68 +113,22 @@ redirect_from:
   </div>
 
   <div class="pub-card">
-    <span class="venue-badge venue-workshop">Preprint (Under Preparation)</span>
-    <div class="pub-title">Transition-Level Memory for GUI Agents</div>
-    <div class="pub-authors"><u>Changmin Lee</u>, et al.</div>
-    <div class="pub-note">Transition-aware compact memory construction for mobile GUI agents.</div>
-  </div>
-
-  <div class="pub-card">
     <span class="venue-badge venue-workshop">Korean Multimedia Society 2024 (Poster)</span>
     <div class="pub-title">Comparison of Recycling Waste Awareness Performance by Transfer Learning Model</div>
     <div class="pub-authors">Dong-hyuk Kim, <u>Chang-min Lee</u>, et al.</div>
   </div>
 </section>
 
-<section id="epic-demo" class="home-section" data-animate>
-  <h2>EPIC Retrieval Flow</h2>
-  <p class="section-intro">
-    This is a compact representation of how EPIC transforms raw personal data into preference-aligned memory and serves low-latency retrieval for on-device generation.
-  </p>
-
-```mermaid
-flowchart LR
-  rawData[Raw_User_Data] --> select[Preference_Relevance_Filtering]
-  select --> memory[Compact_Preference_Memory]
-  memory --> index[EPIC_FAISS_Index]
-  query[User_Query] --> retrieve[Preference_Aligned_Retrieval]
-  index --> retrieve
-  retrieve --> gen[LLM_Generation]
-  gen --> response[Personalized_Response]
-```
-
-  <div class="demo-card">
-    <h3>Mini Demo (Conceptual)</h3>
-    <p>Type a query and preferred style. The demo shows how a preference-aware memory answer is composed.</p>
-    <div class="demo-grid">
-      <label for="demo-query">Query</label>
-      <input id="demo-query" type="text" placeholder="e.g., Recommend a lightweight laptop for research and coding"/>
-
-      <label for="demo-pref">Preference</label>
-      <select id="demo-pref">
-        <option value="concise">Concise and practical</option>
-        <option value="technical">Technical and detailed</option>
-        <option value="budget">Budget-first</option>
-      </select>
-    </div>
-    <button class="pub-abstract-toggle demo-run-btn" type="button" id="run-epic-demo">Run Demo</button>
-    <pre id="demo-output" class="demo-output">Demo output will appear here.</pre>
-  </div>
-</section>
-
-<section id="projects" class="home-section" data-animate>
-  <h2>Projects (Undergraduate)</h2>
+<section id="graduate" class="home-section" data-animate>
+  <h2>Graduate Research</h2>
   <div class="project-grid">
     <div class="project-card">
       <h3>EPIC</h3>
-      <p>Preference-aligned memory construction for efficient on-device RAG under strict resource constraints.</p>
-      <div class="project-result">
-        <span class="result-value">2,404x</span> lower indexing memory, <span class="result-value">+20.17pp</span> preference-following accuracy, <span class="result-value">29.35ms/query</span> on-device latency.
-      </div>
+      <p>Preference-aligned memory construction for efficient on-device RAG.</p>
       <div class="project-tags">
         <span class="project-tag">RAG</span>
         <span class="project-tag">On-Device AI</span>
-        <span class="project-tag">Memory</span>
+        <span class="project-tag">ICML 2026</span>
       </div>
       <div class="pub-links">
         <a class="pub-btn" href="https://arxiv.org/abs/2605.18271" target="_blank" rel="noopener noreferrer">arXiv</a>
@@ -195,6 +145,21 @@ flowchart LR
       </div>
     </div>
     <div class="project-card">
+      <h3>LG Electronics HS Future Technology Project</h3>
+      <p>Developed a personalized model algorithm using Mixture-of-Experts (MoE) for user-specific adaptation.</p>
+      <div class="project-tags">
+        <span class="project-tag">MoE</span>
+        <span class="project-tag">Personalization</span>
+        <span class="project-tag">Jun. 2025 - Sep. 2025</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="home-section" data-animate>
+  <h2>Projects (Undergraduate)</h2>
+  <div class="project-grid">
+    <div class="project-card">
       <h3>MCTCheXFormer</h3>
       <p>Hybrid CNN-Transformer model for multi-label chest X-ray classification using multi-class token refinement.</p>
       <div class="project-tags">
@@ -203,21 +168,59 @@ flowchart LR
       </div>
     </div>
     <div class="project-card">
-      <h3>Smart Table Clock (Undergraduate)</h3>
-      <p>Built an Arduino-based smart table clock with LCD widgets, Daegu bus API integration, and Wi-Fi web control.</p>
+      <h3>Recycling Waste Recognition</h3>
+      <p>Compared YOLOv8, YOLOv9, and RT-DETR for recycling waste awareness; presented as a poster at the Korean Multimedia Society.</p>
       <div class="project-tags">
-        <span class="project-tag">Arduino</span>
-        <span class="project-tag">IoT</span>
-        <span class="project-tag">Web API</span>
+        <span class="project-tag">Computer Vision</span>
+        <span class="project-tag">Transfer Learning</span>
       </div>
     </div>
     <div class="project-card">
-      <h3>Remote File Explorer (Undergraduate)</h3>
-      <p>Developed a terminal-based remote file transfer and browsing system in C with Linux-style file commands and curses UI.</p>
+      <h3>Smart Table Clock</h3>
+      <p>Arduino-based smart table clock with LCD widgets, Daegu bus API integration, and Wi-Fi web control.</p>
+      <div class="project-tags">
+        <span class="project-tag">Arduino</span>
+        <span class="project-tag">IoT</span>
+      </div>
+    </div>
+    <div class="project-card">
+      <h3>Remote File Explorer</h3>
+      <p>Terminal-based remote file transfer and browsing system in C with Linux-style commands and curses UI.</p>
       <div class="project-tags">
         <span class="project-tag">C</span>
         <span class="project-tag">Systems</span>
-        <span class="project-tag">Linux</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pbl" class="home-section" data-animate>
+  <h2>PBL (Graduate)</h2>
+  <div class="project-grid">
+    <div class="project-card">
+      <h3>AI Novatus — Cutting Tool Dynamic Characteristics</h3>
+      <p>Built a model to predict dynamic characteristics of machining tools from cutting-process images (PBL, AI Novatus).</p>
+      <div class="project-tags">
+        <span class="project-tag">AI Novatus</span>
+        <span class="project-tag">Computer Vision</span>
+        <span class="project-tag">Manufacturing</span>
+      </div>
+    </div>
+    <div class="project-card">
+      <h3>Strawberry Smart Farm — Growth Cycle Prediction</h3>
+      <p>Developed a model to classify strawberry growth stages for smart-farm cultivation management.</p>
+      <div class="project-tags">
+        <span class="project-tag">Smart Agriculture</span>
+        <span class="project-tag">Classification</span>
+      </div>
+    </div>
+    <div class="project-card">
+      <h3>LG PBL — Vacuum Cleaner Personalization Pipeline</h3>
+      <p>Designed and implemented a personalization pipeline for LG vacuum cleaner user scenarios (LG PBL).</p>
+      <div class="project-tags">
+        <span class="project-tag">LG PBL</span>
+        <span class="project-tag">Personalization</span>
+        <span class="project-tag">Pipeline</span>
       </div>
     </div>
   </div>
@@ -227,16 +230,12 @@ flowchart LR
   <h2>Teaching</h2>
   <div class="teaching-list">
     <div class="teaching-item">
-      <div class="teaching-course">Teaching Assistant - Computer Networks (CSE)</div>
-      <div class="teaching-note">Supported course operations, grading, and student communication.</div>
+      <div class="teaching-course">Teaching Assistant — Computer Networks (CSE351)</div>
+      <div class="teaching-note">Fall 2025 (2nd semester). Supported course operations, grading, and student communication.</div>
     </div>
     <div class="teaching-item">
-      <div class="teaching-course">Teaching Assistant - On-Device AI for Smart Manufacturing</div>
-      <div class="teaching-note">Supported project-based activities and AI deployment practice.</div>
-    </div>
-    <div class="teaching-item">
-      <div class="teaching-course">Teaching Assistant - NOVA 508</div>
-      <div class="teaching-note">Assisted graduate-level hands-on AI course operation.</div>
+      <div class="teaching-course">Teaching Assistant — On-Device AI for Smart Manufacturing (NOVA508)</div>
+      <div class="teaching-note">Supported project-based activities and on-device AI deployment practice.</div>
     </div>
   </div>
 </section>
@@ -248,14 +247,21 @@ flowchart LR
       <div class="timeline-dot"></div>
       <div class="timeline-date">Mar. 2025 - Present</div>
       <div class="timeline-content">
-        <strong>Graduate Researcher</strong> - UAI Lab, UNIST
+        <strong>M.S.-Ph.D. Student</strong> — UAI Lab, UNIST
       </div>
     </div>
     <div class="timeline-item">
       <div class="timeline-dot"></div>
       <div class="timeline-date">Jan. 2025 - Dec. 2025</div>
       <div class="timeline-content">
-        <strong>Lab Manager</strong> - UAI Lab, UNIST
+        <strong>Lab Manager</strong> — UAI Lab, UNIST
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">Dec. 2023 - Sep. 2024</div>
+      <div class="timeline-content">
+        <strong>Undergraduate Research Assistant</strong> — Pattern Recognition &amp; Machine Intelligence Lab, Kyungpook National University
       </div>
     </div>
   </div>
@@ -271,37 +277,8 @@ flowchart LR
     </div>
     <div class="timeline-item">
       <div class="timeline-dot"></div>
-      <div class="timeline-date">2026</div>
-      <div class="timeline-content">Paper accepted to <strong>ICML 2026</strong></div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
       <div class="timeline-date">2024</div>
-      <div class="timeline-content">Excellence Award, Undergraduate Research Support Program</div>
-    </div>
-  </div>
-</section>
-
-<section id="pbl" class="home-section" data-animate>
-  <h2>PBL and Graduate Projects</h2>
-  <div class="project-grid">
-    <div class="project-card">
-      <h3>AI Novatus / PBL Projects (Graduate)</h3>
-      <p>Industry-academic and project-based work completed during graduate studies, separated from undergraduate project portfolio.</p>
-      <div class="project-tags">
-        <span class="project-tag">PBL</span>
-        <span class="project-tag">Industry-Academic</span>
-        <span class="project-tag">Graduate</span>
-      </div>
-    </div>
-    <div class="project-card">
-      <h3>Human-Centered Hyper-Personalized Agent</h3>
-      <p>Graduate-stage research direction integrating multimodal sensing, personalized RAG, and lightweight memory mechanisms for real-world assistant scenarios.</p>
-      <div class="project-tags">
-        <span class="project-tag">Graduate</span>
-        <span class="project-tag">Agent</span>
-        <span class="project-tag">On-Device</span>
-      </div>
+      <div class="timeline-content">Excellence Award, Undergraduate Research Support Program (Convergent Medical Scientist Training Program)</div>
     </div>
   </div>
 </section>
