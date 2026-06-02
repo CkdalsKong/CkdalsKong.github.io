@@ -53,6 +53,52 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
   setTimeout(tick, 600);
+
+  /* Publication abstract toggles */
+  var abstractButtons = document.querySelectorAll(".pub-abstract-toggle");
+  abstractButtons.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var targetId = btn.getAttribute("data-target");
+      var target = document.getElementById(targetId);
+      if (!target) return;
+      var open = target.classList.toggle("is-open");
+      btn.textContent = open ? "Hide Abstract" : "Show Abstract";
+    });
+  });
+
+  /* EPIC conceptual mini demo */
+  var runDemoBtn = document.getElementById("run-epic-demo");
+  var demoOut = document.getElementById("demo-output");
+  if (runDemoBtn && demoOut) {
+    runDemoBtn.addEventListener("click", function () {
+      var queryEl = document.getElementById("demo-query");
+      var prefEl = document.getElementById("demo-pref");
+      var query = queryEl && queryEl.value ? queryEl.value.trim() : "";
+      var pref = prefEl ? prefEl.value : "concise";
+      if (!query) {
+        demoOut.textContent = "Please enter a query first.";
+        return;
+      }
+
+      var styleHint = {
+        concise: "Return a short and practical answer with 2-3 bullets.",
+        technical: "Return a technical answer with trade-offs and constraints.",
+        budget: "Prioritize affordable options and justify cost/performance."
+      }[pref] || "Return a practical answer.";
+
+      demoOut.textContent =
+        "[EPIC Pipeline]\n" +
+        "1) Query received: " + query + "\n" +
+        "2) Preference signal: " + pref + "\n" +
+        "3) Preference-aligned memory chunks retrieved from compact index\n" +
+        "4) Prompt assembled with user preference + relevant memory\n" +
+        "5) Generation style policy: " + styleHint + "\n\n" +
+        "[Example Response Skeleton]\n" +
+        "- Option A: ...\n" +
+        "- Option B: ...\n" +
+        "- Why this matches preference: ...";
+    });
+  }
 });
 </script>
 

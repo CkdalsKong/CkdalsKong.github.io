@@ -2,23 +2,38 @@ main:
   - title: "Home"
     url: "/#home"
 
-  - title: "About"
-    url: "/#about"
+  - title: "News"
+    url: "/#news"
 
-  - title: "Research"
+  - title: "About"
     url: "/#research"
+
+  - title: "Education"
+    url: "/#education"
 
   - title: "Publications"
     url: "/#publications"
 
+  - title: "EPIC Demo"
+    url: "/#epic-demo"
+
   - title: "Projects"
     url: "/#projects"
+
+  - title: "PBL"
+    url: "/#pbl"
+
+  - title: "Teaching"
+    url: "/#teaching"
+
+  - title: "Experience"
+    url: "/#experience"
 
   - title: "Honors"
     url: "/#honors"
 
-  - title: "Experience"
-    url: "/#experience"
+  - title: "Skills"
+    url: "/#skills"
 
   - title: "Contact"
     url: "/#contact"
