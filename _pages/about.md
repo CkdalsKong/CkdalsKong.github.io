@@ -43,6 +43,10 @@ redirect_from:
       <span class="news-date">2025.08</span>
       <span class="news-text">🏆 Awarded <strong>NRF Master's Fellowship</strong> (석사과정생연구장려금지원).</span>
     </div>
+    <div class="news-item">
+      <span class="news-date">2024.11</span>
+      <span class="news-text">🏆 <strong>Outstanding Paper Award</strong> at Korean Institute of Information Technology Fall Conference (undergraduate paper competition).</span>
+    </div>
   </div>
 </section>
 

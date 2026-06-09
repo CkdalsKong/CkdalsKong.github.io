@@ -28,21 +28,28 @@ author_profile: false
 
   <div class="pub-card">
     <span class="venue-badge venue-workshop">Under Preparation</span>
-    <div class="pub-title">Transition-Level Memory for GUI Agents</div>
+    <div class="pub-title">ΔAgent: Efficient Mobile GUI Agents via Transition-Guided Flexible Action Reuse</div>
     <div class="pub-authors"><u>Changmin Lee</u>, Taehwan Park, Jongwon Lee, Taesik Gong</div>
-    <div class="pub-note">Transition-aware compact memory construction for mobile GUI agents.</div>
+    <div class="pub-note">Transition-guided memory and flexible action reuse for efficient mobile GUI agents.</div>
   </div>
 
   <div class="pub-card">
     <span class="venue-badge venue-journal">IEIE Journal 2024</span>
     <div class="pub-title">Enhancing Chest X-Ray Classification with Multi-Class Token Hybrid Transformers</div>
-    <div class="pub-authors"><u>Chang-min Lee</u>, Ho-kyung Shin, Woo-Jeoung Nam</div>
+    <div class="pub-authors"><u>Changmin Lee</u>, Ho-kyung Shin, Woo-Jeoung Nam</div>
+  </div>
+
+  <div class="pub-card">
+    <span class="venue-badge venue-workshop">KIIT 2024</span>
+    <div class="pub-title">Design and Optimization of a Face Recognition-Based Entry Logging System to Prevent Solitary Deaths</div>
+    <div class="pub-authors"><u>Changmin Lee</u>, Hyun-Jin Dong, Ju-Yong Park, Jin-Seong Bae, et al.</div>
+    <div class="pub-note">🏆 Outstanding Paper Award</div>
   </div>
 
   <div class="pub-card">
     <span class="venue-badge venue-workshop">Korean Multimedia Society 2024 (Poster)</span>
     <div class="pub-title">Comparison of Recycling Waste Awareness Performance by Transfer Learning Model</div>
-    <div class="pub-authors">Dong-hyuk Kim, <u>Chang-min Lee</u>, et al.</div>
+    <div class="pub-authors">Dong-hyuk Kim, <u>Changmin Lee</u>, et al.</div>
   </div>
 </section>
 
@@ -56,13 +63,32 @@ author_profile: false
 
   <div class="project-grid">
     <div class="project-card">
-      <h3>LG Electronics HS Future Technology Project</h3>
-      <p>Personalized model algorithm using Mixture-of-Experts (MoE) for user-specific adaptation.</p>
+      <h3>Dependency-Aware Compensation Scheduling for Multi-Step AI Agent Workflows</h3>
+      <p>Co-developed DACS, a user-space scheduler compensating for dependency-induced and I/O-induced waiting in heterogeneous AI agent workflows on NVIDIA Jetson Orin Nano.</p>
       <div class="project-tags">
-        <span class="project-tag project-tag--mentoring">Industry-Academic Mentoring</span>
+        <span class="project-tag">Systems</span>
+        <span class="project-tag">AI Agents</span>
+        <span class="project-tag">Edge AI</span>
+        <span class="project-tag">Fall 2025</span>
+      </div>
+    </div>
+    <div class="project-card">
+      <h3>Personalized Mixture-of-Experts Model for User-Specific Adaptation</h3>
+      <p>Developed a MoE-based personalized adaptation model as part of the LG Electronics HS Future Technology Project.</p>
+      <div class="project-tags">
         <span class="project-tag">MoE</span>
         <span class="project-tag">Personalization</span>
         <span class="project-tag">Jun–Sep 2025</span>
+      </div>
+    </div>
+    <div class="project-card">
+      <h3>Human Action Recognition with YOLO-Pose and CNN-GCN Fusion</h3>
+      <p>Led development of an end-to-end pipeline for person detection, pose estimation, and four-class action recognition. CNN-GCN fusion achieved CodaLab score 0.89.</p>
+      <div class="project-tags">
+        <span class="project-tag">Computer Vision</span>
+        <span class="project-tag">Pose Estimation</span>
+        <span class="project-tag">GCN</span>
+        <span class="project-tag">Spring 2025</span>
       </div>
     </div>
     <div class="project-card">
@@ -71,7 +97,6 @@ author_profile: false
       <div class="project-tags">
         <span class="project-tag project-tag--mentoring">Industry-Academic Mentoring</span>
         <span class="project-tag">AI Novatus Academia (Gyeongnam), 6th Cohort</span>
-        <span class="project-tag">Computer Vision</span>
         <span class="project-tag">Jun–Sep 2025</span>
       </div>
     </div>
@@ -81,7 +106,6 @@ author_profile: false
       <div class="project-tags">
         <span class="project-tag project-tag--mentoring">Industry-Academic Mentoring</span>
         <span class="project-tag">AI Novatus Academia (Ulsan), 8th Cohort</span>
-        <span class="project-tag">Smart Agriculture</span>
         <span class="project-tag">Sep–Dec 2025</span>
       </div>
     </div>
@@ -91,7 +115,6 @@ author_profile: false
       <div class="project-tags">
         <span class="project-tag project-tag--mentoring">Industry-Academic Mentoring</span>
         <span class="project-tag">LG Electronics DIC Program PBL</span>
-        <span class="project-tag">Personalization</span>
         <span class="project-tag">Aug–Sep 2025</span>
       </div>
     </div>
@@ -101,6 +124,15 @@ author_profile: false
     <span class="projects-tier-label">Undergraduate</span>
   </div>
   <div class="project-grid">
+    <div class="project-card">
+      <h3>Face Recognition Entry Logging System</h3>
+      <p>Real-time face recognition and entry logging system using Raspberry Pi, DeepFace, and Flask for solitary death prevention. FaceNet512 achieved 94.8% accuracy.</p>
+      <div class="project-tags">
+        <span class="project-tag">Computer Vision</span>
+        <span class="project-tag">Raspberry Pi</span>
+        <span class="project-tag">Sep–Dec 2024</span>
+      </div>
+    </div>
     <div class="project-card">
       <h3>MCTCheXFormer</h3>
       <p>Hybrid CNN-Transformer for multi-label chest X-ray classification using multi-class token refinement.</p>
