@@ -1,7 +1,65 @@
 <!-- start custom footer snippets -->
 
-<!-- Support for MathJax -->
+<!-- Support for MatJax -->
 <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script"></script>
+
+<!-- Scroll reveal animation -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var els = document.querySelectorAll("[data-animate]");
+  if ("IntersectionObserver" in window) {
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    els.forEach(function (el) { obs.observe(el); });
+  } else {
+    els.forEach(function (el) { el.classList.add("is-visible"); });
+  }
+
+  /* Typing effect */
+  var phrases = [
+    "On-Device AI Systems.",
+    "Personalized AI Systems.",
+    "Personalized RAG.",
+    "On-Device RAG.",
+    "Efficient GUI Agents.",
+    "Agentic AI Systems."
+  ];
+  var typedEl = document.querySelector(".typed-text");
+  if (!typedEl) return;
+  var phraseIdx = 0, charIdx = 0, deleting = false;
+  function tick() {
+    var current = phrases[phraseIdx];
+    if (deleting) {
+      typedEl.textContent = current.substring(0, charIdx--);
+      if (charIdx < 0) { deleting = false; phraseIdx = (phraseIdx + 1) % phrases.length; setTimeout(tick, 400); return; }
+      setTimeout(tick, 35);
+    } else {
+      typedEl.textContent = current.substring(0, charIdx++);
+      if (charIdx > current.length) { deleting = true; setTimeout(tick, 1800); return; }
+      setTimeout(tick, 70);
+    }
+  }
+  setTimeout(tick, 600);
+
+  /* Publication abstract toggles */
+  var abstractButtons = document.querySelectorAll(".pub-abstract-toggle");
+  abstractButtons.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var targetId = btn.getAttribute("data-target");
+      var target = document.getElementById(targetId);
+      if (!target) return;
+      var open = target.classList.toggle("is-open");
+      btn.textContent = open ? "Hide Abstract" : "Show Abstract";
+    });
+  });
+});
+</script>
 
 <!-- end custom footer snippets -->

@@ -8,24 +8,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Theme: apply saved preference before paint to prevent flash -->
 <script>
-(function(){
-  var t=localStorage.getItem('clTheme')||'dark';
-  if(t==='light') document.documentElement.classList.add('light-mode');
-  document.documentElement.classList.remove('no-js');
-  document.documentElement.classList.add('js');
-})();
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
 </script>
-
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="{{ base_path }}/assets/css/main.css">
-
-<!-- JS -->
-<script src="{{ base_path }}/assets/js/neural-bg.js" defer></script>
-<script src="{{ base_path }}/assets/js/interactions.js" defer></script>
