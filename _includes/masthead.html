@@ -11,7 +11,7 @@
         {% endif %}
       {% endfor %}
     </nav>
-    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle light/dark mode">
+    <button class="theme-toggle" id="cm-theme-toggle" aria-label="Toggle theme" title="Toggle light/dark mode">
       <span class="theme-toggle__icon">🌙</span>
     </button>
     <button class="site-header__menu-btn" id="menu-toggle" aria-label="Toggle menu">
@@ -35,7 +35,7 @@
   const header  = document.getElementById('site-header');
   const menuBtn = document.getElementById('menu-toggle');
   const mobileNav = document.getElementById('mobile-nav');
-  const themeBtn  = document.getElementById('theme-toggle');
+  const themeBtn  = document.getElementById('cm-theme-toggle');
   const icon = themeBtn.querySelector('.theme-toggle__icon');
 
   // sync icon on load

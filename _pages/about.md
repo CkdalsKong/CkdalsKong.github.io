@@ -16,7 +16,7 @@ redirect_from:
         <h1>Changmin Lee</h1>
         <p class="hero-subtitle">AI Research Engineer &nbsp;·&nbsp; M.S.-Ph.D. @ <strong>UNIST</strong></p>
         <p class="hero-lab">UAI Lab &nbsp;·&nbsp; Advisor: Prof. Taesik Gong</p>
-        <p class="hero-gpa">GPA 3.9 / 4.3 &nbsp;·&nbsp; Major GPA 4.2 / 4.3</p>
+        <p class="hero-gpa">B.S. GPA 3.9 / 4.3 &nbsp;·&nbsp; Major 4.2 / 4.3</p>
         <p class="typed-wrapper">
           I work on <span class="typed-text"></span><span class="typed-cursor">|</span>
         </p>
@@ -26,11 +26,6 @@ redirect_from:
           <a class="btn-link" href="https://www.linkedin.com/in/changmin0lee/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a class="btn-link" href="/scholar">Google Scholar</a>
           <a class="btn-link" href="/files/CV.pdf">CV</a>
-        </div>
-        <div class="hero-badges">
-          <span class="hero-badge">🏆 ICML 2026</span>
-          <span class="hero-badge">🎓 NRF Fellow</span>
-          <span class="hero-badge badge-blue">📍 UNIST · Ulsan, Korea</span>
         </div>
       </div>
     </div>
