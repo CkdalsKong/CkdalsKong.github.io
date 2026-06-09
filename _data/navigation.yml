@@ -1,42 +1,7 @@
 main:
-  - title: "Home"
-    url: "/#home"
-
-  - title: "News"
-    url: "/#news"
-
-  - title: "About"
-    url: "/#research"
-
-  - title: "Education"
-    url: "/#education"
-
-  - title: "Publications"
-    url: "/#publications"
-
-  - title: "Graduate"
-    url: "/#graduate"
-
-  - title: "Projects"
-    url: "/#projects"
-
-  - title: "PBL"
-    url: "/#pbl"
-
-  - title: "Teaching"
-    url: "/#teaching"
-
-  - title: "Experience"
-    url: "/#experience"
-
-  - title: "Honors"
-    url: "/#honors"
-
-  - title: "Skills"
-    url: "/#skills"
-
+  - title: "Publications & Projects"
+    url: "/publications/"
+  - title: "CV"
+    url: "/cv/"
   - title: "Contact"
     url: "/#contact"
-
-  - title: "CV"
-    url: "/files/CV.pdf"
