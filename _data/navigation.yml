@@ -14,14 +14,8 @@ main:
   - title: "Publications"
     url: "/#publications"
 
-  - title: "Graduate"
-    url: "/#graduate"
-
   - title: "Projects"
     url: "/#projects"
-
-  - title: "PBL"
-    url: "/#pbl"
 
   - title: "Teaching"
     url: "/#teaching"

@@ -119,8 +119,13 @@ redirect_from:
   </div>
 </section>
 
-<section id="graduate" class="home-section" data-animate>
-  <h2>Graduate Research</h2>
+<section id="projects" class="home-section" data-animate>
+  <h2>Projects</h2>
+  <p class="projects-intro">Graduate and undergraduate work. PBL denotes <em>Project-Based Learning</em> program courses.</p>
+
+  <h3 class="projects-tier">Graduate</h3>
+
+  <p class="projects-group-label">Research</p>
   <div class="project-grid">
     <div class="project-card">
       <h3>EPIC</h3>
@@ -146,22 +151,52 @@ redirect_from:
     </div>
     <div class="project-card">
       <h3>LG Electronics HS Future Technology Project</h3>
-      <p>Developed a personalized model algorithm using Mixture-of-Experts (MoE) for user-specific adaptation.</p>
+      <p>Personalized model algorithm using Mixture-of-Experts (MoE) for user-specific adaptation.</p>
       <div class="project-tags">
         <span class="project-tag">MoE</span>
         <span class="project-tag">Personalization</span>
-        <span class="project-tag">Jun. 2025 - Sep. 2025</span>
+        <span class="project-tag">Jun–Sep 2025</span>
       </div>
     </div>
   </div>
-</section>
 
-<section id="projects" class="home-section" data-animate>
-  <h2>Projects (Undergraduate)</h2>
+  <p class="projects-group-label">AI Novatus PBL</p>
+  <div class="project-grid">
+    <div class="project-card">
+      <h3>Cutting Tool Dynamic Characteristics Prediction</h3>
+      <p>Predicted dynamic characteristics of machining tools from cutting-process images.</p>
+      <div class="project-tags">
+        <span class="project-tag">Computer Vision</span>
+        <span class="project-tag">Manufacturing</span>
+      </div>
+    </div>
+    <div class="project-card">
+      <h3>Strawberry Smart Farm Growth Cycle Prediction</h3>
+      <p>Growth cycle classification model for smart-farm cultivation management.</p>
+      <div class="project-tags">
+        <span class="project-tag">Smart Agriculture</span>
+        <span class="project-tag">Classification</span>
+      </div>
+    </div>
+  </div>
+
+  <p class="projects-group-label">LGPBL</p>
+  <div class="project-grid">
+    <div class="project-card">
+      <h3>Vacuum Cleaner Personalization Pipeline</h3>
+      <p>Designed and implemented a personalization pipeline for LG vacuum cleaner user scenarios.</p>
+      <div class="project-tags">
+        <span class="project-tag">Personalization</span>
+        <span class="project-tag">Pipeline</span>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="projects-tier">Undergraduate</h3>
   <div class="project-grid">
     <div class="project-card">
       <h3>MCTCheXFormer</h3>
-      <p>Hybrid CNN-Transformer model for multi-label chest X-ray classification using multi-class token refinement.</p>
+      <p>Hybrid CNN-Transformer for multi-label chest X-ray classification using multi-class token refinement.</p>
       <div class="project-tags">
         <span class="project-tag">Medical AI</span>
         <span class="project-tag">Vision Transformer</span>
@@ -169,7 +204,7 @@ redirect_from:
     </div>
     <div class="project-card">
       <h3>Recycling Waste Recognition</h3>
-      <p>Compared YOLOv8, YOLOv9, and RT-DETR for recycling waste awareness; presented as a poster at the Korean Multimedia Society.</p>
+      <p>Benchmarked YOLOv8, YOLOv9, RT-DETR for recycling waste detection. Poster at Korean Multimedia Society.</p>
       <div class="project-tags">
         <span class="project-tag">Computer Vision</span>
         <span class="project-tag">Transfer Learning</span>
@@ -177,7 +212,7 @@ redirect_from:
     </div>
     <div class="project-card">
       <h3>Smart Table Clock</h3>
-      <p>Arduino-based smart table clock with LCD widgets, Daegu bus API integration, and Wi-Fi web control.</p>
+      <p>Arduino-based smart clock with LCD widgets, Daegu bus API, and Wi-Fi web control.</p>
       <div class="project-tags">
         <span class="project-tag">Arduino</span>
         <span class="project-tag">IoT</span>
@@ -185,43 +220,10 @@ redirect_from:
     </div>
     <div class="project-card">
       <h3>Remote File Explorer</h3>
-      <p>Terminal-based remote file transfer and browsing system in C with Linux-style commands and curses UI.</p>
+      <p>Terminal-based remote file transfer in C with Linux-style commands and curses UI.</p>
       <div class="project-tags">
         <span class="project-tag">C</span>
         <span class="project-tag">Systems</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="pbl" class="home-section" data-animate>
-  <h2>PBL (Graduate)</h2>
-  <div class="project-grid">
-    <div class="project-card">
-      <h3>AI Novatus — Cutting Tool Dynamic Characteristics</h3>
-      <p>Built a model to predict dynamic characteristics of machining tools from cutting-process images (PBL, AI Novatus).</p>
-      <div class="project-tags">
-        <span class="project-tag">AI Novatus</span>
-        <span class="project-tag">Computer Vision</span>
-        <span class="project-tag">Manufacturing</span>
-      </div>
-    </div>
-    <div class="project-card">
-      <h3>AI Novatus — Strawberry Smart Farm Growth Cycle Prediction</h3>
-      <p>Developed a model to classify strawberry growth stages for smart-farm cultivation management (PBL, AI Novatus).</p>
-      <div class="project-tags">
-        <span class="project-tag">AI Novatus</span>
-        <span class="project-tag">Smart Agriculture</span>
-        <span class="project-tag">Classification</span>
-      </div>
-    </div>
-    <div class="project-card">
-      <h3>LG PBL — Vacuum Cleaner Personalization Pipeline</h3>
-      <p>Designed and implemented a personalization pipeline for LG vacuum cleaner user scenarios (LG PBL).</p>
-      <div class="project-tags">
-        <span class="project-tag">LG PBL</span>
-        <span class="project-tag">Personalization</span>
-        <span class="project-tag">Pipeline</span>
       </div>
     </div>
   </div>
