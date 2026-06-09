@@ -37,11 +37,11 @@ redirect_from:
   <div class="news-list">
     <div class="news-item news-item--highlight">
       <span class="news-date">2026.05</span>
-      <span class="news-text">Paper <strong>"From Volume to Value: Preference-Aligned Memory Construction for On-Device RAG"</strong> accepted to <strong>ICML 2026</strong>.</span>
+      <span class="news-text">🏆 Paper <strong>"From Volume to Value: Preference-Aligned Memory Construction for On-Device RAG"</strong> accepted to <strong>ICML 2026</strong>.</span>
     </div>
     <div class="news-item">
       <span class="news-date">2025.08</span>
-      <span class="news-text">Awarded <strong>NRF Master's Fellowship</strong> (Graduate Student Research Encouragement Grant).</span>
+      <span class="news-text">🎓 Awarded <strong>NRF Master's Fellowship</strong> (Graduate Student Research Encouragement Grant).</span>
     </div>
   </div>
 </section>
