@@ -703,6 +703,12 @@ a:hover { text-decoration: underline; }
 }
 
 .project-tags { gap: 0.4rem; }
+.project-tag--mentoring {
+  color: var(--accent) !important;
+  background: var(--accent-bg) !important;
+  border: 1px solid var(--accent);
+  font-weight: 500;
+}
 
 /* ============================================================
    TEACHING

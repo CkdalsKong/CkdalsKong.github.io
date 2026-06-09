@@ -59,6 +59,7 @@ author_profile: false
       <h3>LG Electronics HS Future Technology Project</h3>
       <p>Personalized model algorithm using Mixture-of-Experts (MoE) for user-specific adaptation.</p>
       <div class="project-tags">
+        <span class="project-tag project-tag--mentoring">Industry-Academic Mentoring</span>
         <span class="project-tag">MoE</span>
         <span class="project-tag">Personalization</span>
         <span class="project-tag">Jun–Sep 2025</span>
@@ -68,6 +69,7 @@ author_profile: false
       <h3>Cutting Tool Dynamic Characteristics Prediction</h3>
       <p>Predicted dynamic characteristics of machining tools from cutting-process images.</p>
       <div class="project-tags">
+        <span class="project-tag project-tag--mentoring">Industry-Academic Mentoring</span>
         <span class="project-tag">AI Novatus PBL</span>
         <span class="project-tag">Computer Vision</span>
         <span class="project-tag">Manufacturing</span>
@@ -77,6 +79,7 @@ author_profile: false
       <h3>Strawberry Smart Farm Growth Cycle Prediction</h3>
       <p>Growth cycle classification model for smart-farm cultivation management.</p>
       <div class="project-tags">
+        <span class="project-tag project-tag--mentoring">Industry-Academic Mentoring</span>
         <span class="project-tag">AI Novatus PBL</span>
         <span class="project-tag">Smart Agriculture</span>
         <span class="project-tag">Classification</span>
@@ -86,6 +89,7 @@ author_profile: false
       <h3>Vacuum Cleaner Personalization Pipeline</h3>
       <p>Designed and implemented a personalization pipeline for LG vacuum cleaner user scenarios.</p>
       <div class="project-tags">
+        <span class="project-tag project-tag--mentoring">Industry-Academic Mentoring</span>
         <span class="project-tag">LG PBL</span>
         <span class="project-tag">Personalization</span>
         <span class="project-tag">Pipeline</span>
