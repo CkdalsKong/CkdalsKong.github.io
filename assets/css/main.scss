@@ -47,6 +47,11 @@
   --max-w: 680px;
   --pad:   1.5rem;
   --tr:    0.2s ease;
+
+  /* override template vars for dark mode */
+  --global-bg-color:   #111;
+  --global-text-color: #ececec;
+  --global-link-color: #6366f1;
 }
 
 /* ============================================================
