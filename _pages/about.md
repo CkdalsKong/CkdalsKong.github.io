@@ -49,11 +49,11 @@ redirect_from:
   </p>
   <div class="research-tags">
     <span class="research-tag">Personalized AI</span>
+    <span class="research-tag">Personalized RAG</span>
+    <span class="research-tag">On-Device AI</span>
     <span class="research-tag">On-Device RAG</span>
     <span class="research-tag">Efficient LLMs</span>
-    <span class="research-tag">Memory Construction</span>
     <span class="research-tag">AI Agents</span>
-    <span class="research-tag">Multimodal Systems</span>
   </div>
 </section>
 
