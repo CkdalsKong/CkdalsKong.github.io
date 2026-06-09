@@ -34,7 +34,7 @@ author:
   # Academic websites
   academia         :
   arxiv            :
-  googlescholar    : # TODO: Add your Google Scholar URL
+  googlescholar    : "https://scholar.google.com/citations?user=HV9YOPEAAAAJ&hl=ko"
   inspire-hep      :
   impactstory      :
   orcid            : # TODO: Add your ORCID URL
