@@ -11,8 +11,8 @@
         {% endif %}
       {% endfor %}
     </nav>
-    <button class="theme-toggle" id="cm-theme-toggle" aria-label="Toggle theme" title="Toggle light/dark mode">
-      <span class="theme-toggle__icon">🌙</span>
+    <button class="theme-toggle" id="cm-theme-toggle" aria-label="Toggle theme" title="Toggle light/dark mode" onclick="(function(){var isLight=document.documentElement.classList.toggle('light-mode');document.documentElement[isLight?'removeAttribute':'setAttribute']('data-theme','dark');localStorage.setItem('clTheme',isLight?'light':'dark');document.querySelector('.theme-toggle__icon').textContent=isLight?'☀️':'🌙';})()">
+      <span class="theme-toggle__icon">☀️</span>
     </button>
     <button class="site-header__menu-btn" id="menu-toggle" aria-label="Toggle menu">
       <span></span><span></span><span></span>
@@ -35,26 +35,10 @@
   const header  = document.getElementById('site-header');
   const menuBtn = document.getElementById('menu-toggle');
   const mobileNav = document.getElementById('mobile-nav');
-  const themeBtn  = document.getElementById('cm-theme-toggle');
-  const icon = themeBtn.querySelector('.theme-toggle__icon');
 
   // sync icon on load
-  function syncIcon() {
-    icon.textContent = document.documentElement.classList.contains('light-mode') ? '☀️' : '🌙';
-  }
-  syncIcon();
-
-  // theme toggle
-  themeBtn.addEventListener('click', function () {
-    var isLight = document.documentElement.classList.toggle('light-mode');
-    if (isLight) {
-      document.documentElement.removeAttribute('data-theme');
-    } else {
-      document.documentElement.setAttribute('data-theme', 'dark');
-    }
-    localStorage.setItem('clTheme', isLight ? 'light' : 'dark');
-    syncIcon();
-  });
+  var icon = document.querySelector('.theme-toggle__icon');
+  if (icon) icon.textContent = document.documentElement.classList.contains('light-mode') ? '☀️' : '🌙';
 
   // scroll → glass effect
   window.addEventListener('scroll', function () {
