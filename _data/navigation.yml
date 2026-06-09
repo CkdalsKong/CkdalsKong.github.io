@@ -1,36 +1,3 @@
 main:
-  - title: "Home"
-    url: "/#home"
-
-  - title: "News"
-    url: "/#news"
-
-  - title: "About"
-    url: "/#research"
-
-  - title: "Education"
-    url: "/#education"
-
-  - title: "Publications"
-    url: "/#publications"
-
-  - title: "Projects"
-    url: "/#projects"
-
-  - title: "Teaching"
-    url: "/#teaching"
-
-  - title: "Experience"
-    url: "/#experience"
-
-  - title: "Honors"
-    url: "/#honors"
-
-  - title: "Skills"
-    url: "/#skills"
-
-  - title: "Contact"
-    url: "/#contact"
-
-  - title: "CV"
-    url: "/files/CV.pdf"
+  - title: "Publications & Projects"
+    url: "/publications/"
