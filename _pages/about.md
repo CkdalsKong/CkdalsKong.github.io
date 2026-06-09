@@ -207,9 +207,10 @@ redirect_from:
       </div>
     </div>
     <div class="project-card">
-      <h3>Strawberry Smart Farm — Growth Cycle Prediction</h3>
-      <p>Developed a model to classify strawberry growth stages for smart-farm cultivation management.</p>
+      <h3>AI Novatus — Strawberry Smart Farm Growth Cycle Prediction</h3>
+      <p>Developed a model to classify strawberry growth stages for smart-farm cultivation management (PBL, AI Novatus).</p>
       <div class="project-tags">
+        <span class="project-tag">AI Novatus</span>
         <span class="project-tag">Smart Agriculture</span>
         <span class="project-tag">Classification</span>
       </div>
@@ -236,6 +237,10 @@ redirect_from:
     <div class="teaching-item">
       <div class="teaching-course">Teaching Assistant — On-Device AI for Smart Manufacturing (NOVA508)</div>
       <div class="teaching-note">Supported project-based activities and on-device AI deployment practice.</div>
+    </div>
+    <div class="teaching-item">
+      <div class="teaching-course">Teaching Assistant — Data Preprocessing (AI Novatus)</div>
+      <div class="teaching-note">Supported data preprocessing lectures and hands-on exercises in the AI Novatus graduate program.</div>
     </div>
   </div>
 </section>
