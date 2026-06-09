@@ -47,6 +47,11 @@
   // theme toggle
   themeBtn.addEventListener('click', function () {
     var isLight = document.documentElement.classList.toggle('light-mode');
+    if (isLight) {
+      document.documentElement.removeAttribute('data-theme');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
     localStorage.setItem('clTheme', isLight ? 'light' : 'dark');
     syncIcon();
   });

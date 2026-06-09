@@ -5,7 +5,11 @@
 <script>
 (function(){
   var t = localStorage.getItem('clTheme') || 'light';
-  if (t === 'light') document.documentElement.classList.add('light-mode');
+  if (t === 'light') {
+    document.documentElement.classList.add('light-mode');
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
 })();
 </script>
 
