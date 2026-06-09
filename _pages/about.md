@@ -16,6 +16,7 @@ redirect_from:
         <h1>Changmin Lee</h1>
         <p class="hero-subtitle">AI Research Engineer &nbsp;·&nbsp; M.S.-Ph.D. @ <strong>UNIST</strong></p>
         <p class="hero-lab">UAI Lab &nbsp;·&nbsp; Advisor: Prof. Taesik Gong</p>
+        <p class="hero-gpa">GPA 3.9 / 4.3 &nbsp;·&nbsp; Major GPA 4.2 / 4.3</p>
         <p class="typed-wrapper">
           I work on <span class="typed-text"></span><span class="typed-cursor">|</span>
         </p>
@@ -78,40 +79,3 @@ redirect_from:
   </div>
 </section>
 
-<section id="publications" class="home-section" data-animate>
-  <h2>Featured Publication</h2>
-
-  <div class="pub-card pub-featured">
-    <span class="venue-badge venue-top">ICML 2026</span>
-    <div class="pub-title">From Volume to Value: Preference-Aligned Memory Construction for On-Device RAG</div>
-    <div class="pub-authors"><u>Changmin Lee</u>, Jaemin Kim, Taesik Gong</div>
-    <div class="pub-links">
-      <a class="pub-btn" href="https://arxiv.org/abs/2605.18271" target="_blank" rel="noopener noreferrer">arXiv ↗</a>
-      <a class="pub-btn" href="https://github.com/UbiquitousAILab/EPIC" target="_blank" rel="noopener noreferrer">Code ↗</a>
-    </div>
-    <button class="pub-abstract-toggle" type="button" data-target="abs-epic">Abstract ▼</button>
-    <div class="pub-abstract" id="abs-epic">
-      We propose EPIC, a preference-aligned memory construction framework for on-device RAG that selectively retains preference-relevant information and aligns retrieval toward user preferences under tight memory budgets.
-    </div>
-  </div>
-
-  <a class="see-all-link" href="/publications/">View all publications &amp; projects →</a>
-</section>
-
-<section id="contact" class="home-section" data-animate>
-  <h2>Contact</h2>
-  <div class="contact-cards">
-    <a class="contact-card" href="mailto:lchm1106@unist.ac.kr">
-      <strong>Email</strong>
-      <span>lchm1106@unist.ac.kr</span>
-    </a>
-    <a class="contact-card" href="https://github.com/CkdalsKong" target="_blank" rel="noopener noreferrer">
-      <strong>GitHub</strong>
-      <span>github.com/CkdalsKong</span>
-    </a>
-    <a class="contact-card" href="https://www.linkedin.com/in/changmin0lee/" target="_blank" rel="noopener noreferrer">
-      <strong>LinkedIn</strong>
-      <span>linkedin.com/in/changmin0lee</span>
-    </a>
-  </div>
-</section>

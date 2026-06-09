@@ -12,9 +12,7 @@ author_profile: false
 <section id="publications" class="home-section" data-animate>
   <h2>Publications</h2>
 
-  <p class="pub-section-label">★ Featured</p>
-
-  <div class="pub-card pub-featured">
+  <div class="pub-card">
     <span class="venue-badge venue-top">ICML 2026</span>
     <div class="pub-title">From Volume to Value: Preference-Aligned Memory Construction for On-Device RAG</div>
     <div class="pub-authors"><u>Changmin Lee</u>, Jaemin Kim, Taesik Gong</div>
@@ -28,16 +26,12 @@ author_profile: false
     </div>
   </div>
 
-  <p class="pub-section-label">Preprints</p>
-
   <div class="pub-card">
     <span class="venue-badge venue-workshop">Under Preparation</span>
     <div class="pub-title">Transition-Level Memory for GUI Agents</div>
     <div class="pub-authors"><u>Changmin Lee</u>, Taehwan Park, Jongwon Lee, Taesik Gong</div>
     <div class="pub-note">Transition-aware compact memory construction for mobile GUI agents.</div>
   </div>
-
-  <p class="pub-section-label">Other Publications</p>
 
   <div class="pub-card">
     <span class="venue-badge venue-journal">IEIE Journal 2024</span>
@@ -54,33 +48,13 @@ author_profile: false
 
 <section id="projects" class="home-section" data-animate>
   <h2>Projects</h2>
+  <p class="projects-intro">Graduate and undergraduate work. PBL denotes <em>Project-Based Learning</em> program courses.</p>
 
-  <h3 class="projects-tier">Graduate</h3>
+  <div class="projects-tier-block">
+    <span class="projects-tier-label">Graduate</span>
+  </div>
 
-  <p class="projects-group-label">Research</p>
   <div class="project-grid">
-    <div class="project-card">
-      <h3>EPIC</h3>
-      <p>Preference-aligned memory construction for efficient on-device RAG.</p>
-      <div class="project-tags">
-        <span class="project-tag">RAG</span>
-        <span class="project-tag">On-Device AI</span>
-        <span class="project-tag">ICML 2026</span>
-      </div>
-      <div class="pub-links" style="margin-top:0.6rem">
-        <a class="pub-btn" href="https://arxiv.org/abs/2605.18271" target="_blank" rel="noopener noreferrer">arXiv ↗</a>
-        <a class="pub-btn" href="https://github.com/UbiquitousAILab/EPIC" target="_blank" rel="noopener noreferrer">Code ↗</a>
-      </div>
-    </div>
-    <div class="project-card">
-      <h3>Transition-Level Memory for GUI Agents</h3>
-      <p>Compact transition-aware memory design for mobile GUI agents with long-horizon task support.</p>
-      <div class="project-tags">
-        <span class="project-tag">GUI Agent</span>
-        <span class="project-tag">Memory</span>
-        <span class="project-tag">Under Preparation</span>
-      </div>
-    </div>
     <div class="project-card">
       <h3>LG Electronics HS Future Technology Project</h3>
       <p>Personalized model algorithm using Mixture-of-Experts (MoE) for user-specific adaptation.</p>
@@ -90,14 +64,11 @@ author_profile: false
         <span class="project-tag">Jun–Sep 2025</span>
       </div>
     </div>
-  </div>
-
-  <p class="projects-group-label">AI Novatus PBL <span class="projects-group-hint">(Project-Based Learning)</span></p>
-  <div class="project-grid">
     <div class="project-card">
       <h3>Cutting Tool Dynamic Characteristics Prediction</h3>
       <p>Predicted dynamic characteristics of machining tools from cutting-process images.</p>
       <div class="project-tags">
+        <span class="project-tag">AI Novatus PBL</span>
         <span class="project-tag">Computer Vision</span>
         <span class="project-tag">Manufacturing</span>
       </div>
@@ -106,25 +77,25 @@ author_profile: false
       <h3>Strawberry Smart Farm Growth Cycle Prediction</h3>
       <p>Growth cycle classification model for smart-farm cultivation management.</p>
       <div class="project-tags">
+        <span class="project-tag">AI Novatus PBL</span>
         <span class="project-tag">Smart Agriculture</span>
         <span class="project-tag">Classification</span>
       </div>
     </div>
-  </div>
-
-  <p class="projects-group-label">LGPBL <span class="projects-group-hint">(LG Project-Based Learning)</span></p>
-  <div class="project-grid">
     <div class="project-card">
       <h3>Vacuum Cleaner Personalization Pipeline</h3>
       <p>Designed and implemented a personalization pipeline for LG vacuum cleaner user scenarios.</p>
       <div class="project-tags">
+        <span class="project-tag">LG PBL</span>
         <span class="project-tag">Personalization</span>
         <span class="project-tag">Pipeline</span>
       </div>
     </div>
   </div>
 
-  <h3 class="projects-tier">Undergraduate</h3>
+  <div class="projects-tier-block projects-tier-block--undergraduate">
+    <span class="projects-tier-label">Undergraduate</span>
+  </div>
   <div class="project-grid">
     <div class="project-card">
       <h3>MCTCheXFormer</h3>
