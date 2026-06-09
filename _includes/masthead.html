@@ -1,29 +1,79 @@
 {% include base_path %}
-<div class="masthead">
-  <div class="masthead__inner-wrap">
-    <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
-        <button><span class="navicon"></span></button>
-        <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg persist {% if page.url == '/' or page.url == '/index.html' %}selected{% endif %}">
-            <a href="{{ base_path }}/">{{ site.title }}</a>
-          </li>
-          {% for link in site.data.navigation.main %}
-            {% if link.url contains 'http' %}
-              {% assign domain = '' %}
-            {% else %}
-              {% assign domain = base_path %}
-            {% endif %}
-            <li class="masthead__menu-item {% if page.url contains link.url and link.url != '/' %}selected{% endif %}">
-              <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
-            </li>
-          {% endfor %}
-          <li id="theme-toggle" class="masthead__menu-item persist tail">
-            <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
-          </li>
-        </ul>
-        <ul class="hidden-links hidden"></ul>
-      </nav>
-    </div>
+<header class="site-header" id="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__logo" href="{{ base_path }}/">CL</a>
+    <nav class="site-header__nav" id="site-nav">
+      {% for link in site.data.navigation.main %}
+        {% if link.url contains 'http' or link.url contains '.pdf' %}
+          <a class="nav-link" href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.title }}</a>
+        {% else %}
+          <a class="nav-link" href="{{ base_path }}{{ link.url }}" data-section="{{ link.url | remove: '/#' }}">{{ link.title }}</a>
+        {% endif %}
+      {% endfor %}
+    </nav>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle light/dark mode">
+      <span class="theme-toggle__icon">🌙</span>
+    </button>
+    <button class="site-header__menu-btn" id="menu-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
-</div>
+  <!-- mobile drawer -->
+  <nav class="mobile-nav" id="mobile-nav">
+    {% for link in site.data.navigation.main %}
+      {% if link.url contains 'http' or link.url contains '.pdf' %}
+        <a class="mobile-nav__link" href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.title }}</a>
+      {% else %}
+        <a class="mobile-nav__link" href="{{ base_path }}{{ link.url }}">{{ link.title }}</a>
+      {% endif %}
+    {% endfor %}
+  </nav>
+</header>
+
+<script>
+(function () {
+  const header  = document.getElementById('site-header');
+  const menuBtn = document.getElementById('menu-toggle');
+  const mobileNav = document.getElementById('mobile-nav');
+  const themeBtn  = document.getElementById('theme-toggle');
+  const icon = themeBtn.querySelector('.theme-toggle__icon');
+
+  // sync icon on load
+  function syncIcon() {
+    icon.textContent = document.documentElement.classList.contains('light-mode') ? '☀️' : '🌙';
+  }
+  syncIcon();
+
+  // theme toggle
+  themeBtn.addEventListener('click', function () {
+    var isLight = document.documentElement.classList.toggle('light-mode');
+    localStorage.setItem('clTheme', isLight ? 'light' : 'dark');
+    syncIcon();
+  });
+
+  // scroll → glass effect
+  window.addEventListener('scroll', function () {
+    header.classList.toggle('scrolled', window.scrollY > 30);
+  }, { passive: true });
+
+  // mobile menu
+  menuBtn.addEventListener('click', function () {
+    mobileNav.classList.toggle('open');
+    menuBtn.classList.toggle('open');
+  });
+
+  // scroll-spy
+  const sections = document.querySelectorAll('.home-section[id]');
+  const navLinks = document.querySelectorAll('.nav-link[data-section]');
+  const obs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        navLinks.forEach(function (l) {
+          l.classList.toggle('active', l.dataset.section === entry.target.id);
+        });
+      }
+    });
+  }, { rootMargin: '-30% 0px -60% 0px' });
+  sections.forEach(function (s) { obs.observe(s); });
+})();
+</script>
