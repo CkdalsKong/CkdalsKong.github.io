@@ -40,7 +40,7 @@ author_profile: false
   </div>
 
   <div class="pub-card">
-    <span class="venue-badge venue-workshop">KIIT 2024 (Poster)</span>
+    <span class="venue-badge venue-workshop">KIIT 2024</span>
     <div class="pub-title">Design and Optimization of a Face Recognition-Based Entry Logging System to Prevent Solitary Deaths</div>
     <div class="pub-authors"><u>Changmin Lee</u>, Hyun-Jin Dong, Ju-Yong Park, Jin-Seong Bae, et al.</div>
     <div class="pub-note">🏆 Outstanding Paper Award</div>
