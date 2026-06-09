@@ -70,19 +70,19 @@ author_profile: false
       <p>Predicted dynamic characteristics of machining tools from cutting-process images.</p>
       <div class="project-tags">
         <span class="project-tag project-tag--mentoring">Industry-Academic Mentoring</span>
-        <span class="project-tag">AI Novatus PBL</span>
+        <span class="project-tag">AI Novatus Academia (Gyeongnam), 6th Cohort</span>
         <span class="project-tag">Computer Vision</span>
-        <span class="project-tag">Manufacturing</span>
+        <span class="project-tag">Jun–Sep 2025</span>
       </div>
     </div>
     <div class="project-card">
       <h3>Strawberry Smart Farm Growth Cycle Prediction</h3>
-      <p>Growth cycle classification model for smart-farm cultivation management.</p>
+      <p>Growth cycle classification model for smart-farm strawberry cultivation management.</p>
       <div class="project-tags">
         <span class="project-tag project-tag--mentoring">Industry-Academic Mentoring</span>
-        <span class="project-tag">AI Novatus PBL</span>
+        <span class="project-tag">AI Novatus Academia (Ulsan), 8th Cohort</span>
         <span class="project-tag">Smart Agriculture</span>
-        <span class="project-tag">Classification</span>
+        <span class="project-tag">Sep–Dec 2025</span>
       </div>
     </div>
     <div class="project-card">
@@ -90,9 +90,9 @@ author_profile: false
       <p>Designed and implemented a personalization pipeline for LG vacuum cleaner user scenarios.</p>
       <div class="project-tags">
         <span class="project-tag project-tag--mentoring">Industry-Academic Mentoring</span>
-        <span class="project-tag">LG PBL</span>
+        <span class="project-tag">LG Electronics DIC Program PBL</span>
         <span class="project-tag">Personalization</span>
-        <span class="project-tag">Pipeline</span>
+        <span class="project-tag">Aug–Sep 2025</span>
       </div>
     </div>
   </div>
@@ -107,6 +107,7 @@ author_profile: false
       <div class="project-tags">
         <span class="project-tag">Medical AI</span>
         <span class="project-tag">Vision Transformer</span>
+        <span class="project-tag">Dec 2023–Sep 2024</span>
       </div>
     </div>
     <div class="project-card">
@@ -115,6 +116,7 @@ author_profile: false
       <div class="project-tags">
         <span class="project-tag">Computer Vision</span>
         <span class="project-tag">Transfer Learning</span>
+        <span class="project-tag">Mar–Jun 2024</span>
       </div>
     </div>
     <div class="project-card">
@@ -123,6 +125,7 @@ author_profile: false
       <div class="project-tags">
         <span class="project-tag">Arduino</span>
         <span class="project-tag">IoT</span>
+        <span class="project-tag">Sep–Dec 2023</span>
       </div>
     </div>
     <div class="project-card">
@@ -131,6 +134,7 @@ author_profile: false
       <div class="project-tags">
         <span class="project-tag">C</span>
         <span class="project-tag">Systems</span>
+        <span class="project-tag">Mar–Jun 2023</span>
       </div>
     </div>
   </div>
