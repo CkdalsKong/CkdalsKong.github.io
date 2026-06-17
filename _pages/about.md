@@ -90,9 +90,9 @@ redirect_from:
     <div class="exp-header">
       <img class="exp-logo" src="/images/logo-uai.png" alt="UAI Lab"/>
       <div class="exp-meta">
-        <div class="exp-org"><a href="https://sites.google.com/view/uailab?pli=1" target="_blank" rel="noopener noreferrer">Ubiquitous AI Lab (UAI Lab)</a></div>
+        <div class="exp-org"><a href="https://sites.google.com/view/uailab?pli=1" target="_blank" rel="noopener noreferrer">UAI Lab</a></div>
         <div class="exp-role">Graduate Researcher</div>
-        <div class="exp-place">UNIST, Republic of Korea</div>
+        <div class="exp-place">UNIST · Ulsan, Korea</div>
       </div>
       <div class="exp-period">2025.03 — Present</div>
     </div>
@@ -106,9 +106,9 @@ redirect_from:
     <div class="exp-header">
       <img class="exp-logo" src="/images/logo-prmi.png" alt="PRMI Lab"/>
       <div class="exp-meta">
-        <div class="exp-org"><a href="https://sites.google.com/view/prmi-knu/home" target="_blank" rel="noopener noreferrer">Pattern Recognition &amp; Machine Intelligence Lab (PRMI)</a></div>
+        <div class="exp-org"><a href="https://sites.google.com/view/prmi-knu/home" target="_blank" rel="noopener noreferrer">PRMI Lab</a></div>
         <div class="exp-role">Undergraduate Research Intern</div>
-        <div class="exp-place">Kyungpook National University, Republic of Korea</div>
+        <div class="exp-place">Kyungpook National University · Daegu, Korea</div>
       </div>
       <div class="exp-period">2024.01 — 2024.11</div>
     </div>
@@ -126,7 +126,7 @@ redirect_from:
       <div class="edu-meta">
         <div class="edu-inst">UNIST</div>
         <div class="edu-degree">M.S.-Ph.D. in Computer Science and Engineering</div>
-        <div class="edu-place">Ulsan, Republic of Korea</div>
+        <div class="edu-place">Ulsan, Korea</div>
       </div>
       <div class="edu-period-v2">2025.03 — Present</div>
     </div>
@@ -141,7 +141,7 @@ redirect_from:
       <div class="edu-meta">
         <div class="edu-inst">Kyungpook National University</div>
         <div class="edu-degree">B.S. in Computer Science and Engineering</div>
-        <div class="edu-place">Daegu, Republic of Korea</div>
+        <div class="edu-place">Daegu, Korea</div>
       </div>
       <div class="edu-period-v2">2019.02 — 2025.02</div>
     </div>
