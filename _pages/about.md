@@ -159,7 +159,7 @@ redirect_from:
         <div class="edu-degree">B.S. in Computer Science and Engineering</div>
         <div class="edu-place">Daegu, Korea</div>
       </div>
-      <div class="edu-period-v2">2019.02 — 2025.02</div>
+      <div class="edu-period-v2">2019.03 — 2025.02</div>
     </div>
     <ul class="edu-bullets">
       <li>GPA: <strong>3.83 / 4.3</strong> &nbsp;·&nbsp; Major GPA: <strong>4.07 / 4.3</strong></li>
