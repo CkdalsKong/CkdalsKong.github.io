@@ -7,6 +7,11 @@
     }
   });
 
+  // on any reload (Cmd+R / Cmd+Shift+R), reset so animation plays again
+  if ((performance.getEntriesByType('navigation')[0] || {}).type === 'reload') {
+    sessionStorage.removeItem('cm-loaded');
+  }
+
   var loader = document.getElementById('cm-loader');
   if (sessionStorage.getItem('cm-loaded')) {
     if (loader) loader.remove();
