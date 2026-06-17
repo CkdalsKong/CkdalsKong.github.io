@@ -485,8 +485,6 @@ a:hover { text-decoration: underline; }
   &:first-child { margin-top: 0; }
 }
 
-html.light-mode .about-subsection-title { color: $L-fg !important; }
-
 /* ============================================================
    EXPERIENCE / EDUCATION CARDS
    ============================================================ */
@@ -1047,6 +1045,7 @@ html.light-mode .skill-tag        { color: $L-fg2 !important; }
 
 html.light-mode .contact-card     { border-bottom-color: $L-line !important; strong { color: $L-fg3 !important; } span { color: $L-accent !important; } }
 
+html.light-mode .about-subsection-title { color: $L-fg !important; }
 html.light-mode .exp-card,
 html.light-mode .edu-card-v2      { border-color: $L-line !important; background: #fff !important; }
 html.light-mode .exp-org,
