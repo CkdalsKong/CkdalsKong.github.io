@@ -1,0 +1,201 @@
+<div id="cm-loader" aria-hidden="true">
+  <div class="cm-loader__bg"></div>
+  <div class="cm-loader__fragments" id="cm-fragments"></div>
+  <div class="cm-loader__center">
+    <div class="cm-loader__label">Retrieving memory</div>
+    <div class="cm-loader__bar-wrap">
+      <div class="cm-loader__bar" id="cm-bar"></div>
+    </div>
+    <div class="cm-loader__status" id="cm-status">Initializing...</div>
+  </div>
+</div>
+
+<style>
+#cm-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0d0f1f;
+  transition: opacity 0.6s ease;
+}
+
+#cm-loader.cm-loader--fade {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.cm-loader__bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 50%, rgba(59,74,200,0.12) 0%, transparent 70%);
+}
+
+.cm-loader__center {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: min(340px, 80vw);
+}
+
+.cm-loader__label {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 1.1rem;
+}
+
+.cm-loader__bar-wrap {
+  width: 100%;
+  height: 2px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 0.9rem;
+}
+
+.cm-loader__bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #3b4ac8, #6ee7f7);
+  border-radius: 2px;
+  transition: width 0.12s ease;
+  box-shadow: 0 0 8px rgba(110,231,247,0.5);
+}
+
+.cm-loader__status {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.68rem;
+  color: rgba(255,255,255,0.25);
+  letter-spacing: 0.05em;
+  min-height: 1.2em;
+}
+
+/* ── Fragment chips ── */
+.cm-loader__fragments {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.cm-frag {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.7);
+  background: rgba(59,74,200,0.18);
+  border: 1px solid rgba(59,74,200,0.35);
+  border-radius: 6px;
+  padding: 0.3em 0.7em;
+  white-space: nowrap;
+  opacity: 0;
+  transform: scale(0.85);
+  transition: opacity 0.4s ease, transform 0.5s ease;
+}
+
+.cm-frag.cm-frag--in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.cm-frag.cm-frag--out {
+  opacity: 0;
+  transform: scale(0.9) translateY(-6px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+</style>
+
+<script>
+(function () {
+  var loader = document.getElementById('cm-loader');
+  if (!loader) return;
+
+  var fragments = [
+    { icon: '📄', text: 'EPIC · ICML 2026' },
+    { icon: '🔬', text: 'On-Device RAG' },
+    { icon: '🎓', text: 'UNIST · UAI Lab' },
+    { icon: '⚡', text: 'On-Device AI' },
+    { icon: '🏆', text: 'NRF Fellowship' },
+    { icon: '🤖', text: 'AI Agents & Memory' },
+    { icon: '🎯', text: 'Personalized AI' },
+    { icon: '💻', text: 'github.com/UbiquitousAILab' },
+    { icon: '📊', text: '2,404× memory reduction' },
+    { icon: '🏅', text: 'Outstanding Paper Award' },
+    { icon: '🧠', text: 'Preference-Aligned Memory' },
+    { icon: '📱', text: 'ΔAgent · Mobile GUI' },
+  ];
+
+  var steps = [
+    { pct: 15,  msg: 'Loading profile...' },
+    { pct: 35,  msg: 'Retrieving publications...' },
+    { pct: 55,  msg: 'Fetching experience...' },
+    { pct: 72,  msg: 'Indexing research areas...' },
+    { pct: 88,  msg: 'Aligning preferences...' },
+    { pct: 100, msg: 'Ready.' },
+  ];
+
+  var bar    = document.getElementById('cm-bar');
+  var status = document.getElementById('cm-status');
+  var pool   = document.getElementById('cm-fragments');
+
+  // place fragments at random positions
+  var placed = fragments.map(function (f, i) {
+    var el = document.createElement('span');
+    el.className = 'cm-frag';
+    el.innerHTML = '<span>' + f.icon + '</span><span>' + f.text + '</span>';
+    var side = Math.random();
+    var top, left;
+    if (side < 0.25)      { top = (5  + Math.random() * 35) + '%'; left = (2  + Math.random() * 18) + '%'; }
+    else if (side < 0.5)  { top = (5  + Math.random() * 35) + '%'; left = (78 + Math.random() * 18) + '%'; }
+    else if (side < 0.75) { top = (62 + Math.random() * 30) + '%'; left = (5  + Math.random() * 35) + '%'; }
+    else                  { top = (62 + Math.random() * 30) + '%'; left = (58 + Math.random() * 35) + '%'; }
+    el.style.top  = top;
+    el.style.left = left;
+    pool.appendChild(el);
+    return el;
+  });
+
+  var stepIdx = 0;
+  var fragIdx = 0;
+
+  function showNextFrag() {
+    if (fragIdx < placed.length) {
+      placed[fragIdx].classList.add('cm-frag--in');
+      fragIdx++;
+    }
+  }
+
+  function runStep(i) {
+    if (i >= steps.length) return;
+    var s = steps[i];
+    setTimeout(function () {
+      bar.style.width = s.pct + '%';
+      status.textContent = s.msg;
+      showNextFrag();
+      showNextFrag();
+      if (i < steps.length - 1) {
+        runStep(i + 1);
+      } else {
+        // fade out
+        setTimeout(function () {
+          placed.forEach(function (el) { el.classList.add('cm-frag--out'); });
+          setTimeout(function () {
+            loader.classList.add('cm-loader--fade');
+            setTimeout(function () { loader.style.display = 'none'; }, 650);
+          }, 300);
+        }, 400);
+      }
+    }, i === 0 ? 200 : 350 + Math.random() * 150);
+  }
+
+  runStep(0);
+})();
+</script>

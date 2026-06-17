@@ -13,6 +13,7 @@ layout: compress
 
   <body>
 
+    {% if page.permalink == "/" %}{% include loading-screen.html %}{% endif %}
     {% include browser-upgrade.html %}
     {% include masthead.html %}
 
