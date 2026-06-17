@@ -114,7 +114,7 @@ redirect_from:
     </div>
     <ul class="exp-bullets">
       <li>Advisor: <a href="https://scholar.google.com/citations?user=9wo5l0QAAAAJ&hl=ko&oi=sra" target="_blank" rel="noopener noreferrer">Prof. Woo-Jeoung Nam</a></li>
-      <li>Research on Machine Learning · Explainable AI · Computer Vision &amp; Analysis</li>
+      <li>Research on Explainable AI · Computer Vision &amp; Analysis</li>
     </ul>
   </div>
 
