@@ -1110,9 +1110,20 @@ html.light-mode .back-link         { color: $L-fg3 !important; }
    RESPONSIVE
    ============================================================ */
 @media (max-width: 640px) {
-  .hero-section { padding: 3.5rem var(--pad) 3rem !important; }
+  .hero-section { padding: 3rem var(--pad) 2.5rem !important; }
 
-  .hero-inner { flex-direction: column; gap: 1.2rem; }
+  .hero-inner { flex-direction: column; align-items: center; gap: 1rem; text-align: center; }
+
+  .hero-photo { width: 96px; height: 96px; }
+
+  .hero-content h1 { font-size: 1.6rem; }
+
+  .hero-subtitle,
+  .hero-lab { font-family: var(--font-sans); font-size: 0.9rem; }
+
+  .typed-wrapper { font-family: var(--font-sans); font-size: 0.9rem; }
+
+  .quick-links { justify-content: center; }
 
   .news-item,
   .timeline-item,

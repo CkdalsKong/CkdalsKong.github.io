@@ -30,39 +30,4 @@
   </nav>
 </header>
 
-<script>
-(function () {
-  const header  = document.getElementById('site-header');
-  const menuBtn = document.getElementById('menu-toggle');
-  const mobileNav = document.getElementById('mobile-nav');
-
-  // sync icon on load
-  var icon = document.querySelector('.theme-toggle__icon');
-  if (icon) icon.textContent = document.documentElement.classList.contains('light-mode') ? '☀️' : '🌙';
-
-  // scroll → glass effect
-  window.addEventListener('scroll', function () {
-    header.classList.toggle('scrolled', window.scrollY > 30);
-  }, { passive: true });
-
-  // mobile menu
-  menuBtn.addEventListener('click', function () {
-    mobileNav.classList.toggle('open');
-    menuBtn.classList.toggle('open');
-  });
-
-  // scroll-spy
-  const sections = document.querySelectorAll('.home-section[id]');
-  const navLinks = document.querySelectorAll('.nav-link[data-section]');
-  const obs = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        navLinks.forEach(function (l) {
-          l.classList.toggle('active', l.dataset.section === entry.target.id);
-        });
-      }
-    });
-  }, { rootMargin: '-30% 0px -60% 0px' });
-  sections.forEach(function (s) { obs.observe(s); });
-})();
-</script>
+<script src="/assets/js/masthead.js"></script>

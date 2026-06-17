@@ -1,4 +1,12 @@
 (function () {
+  // iOS bfcache: page restored from cache fires pageshow with persisted=true
+  window.addEventListener('pageshow', function (e) {
+    if (e.persisted) {
+      var l = document.getElementById('cm-loader');
+      if (l) l.remove();
+    }
+  });
+
   var loader = document.getElementById('cm-loader');
   if (sessionStorage.getItem('cm-loaded')) {
     if (loader) loader.remove();
