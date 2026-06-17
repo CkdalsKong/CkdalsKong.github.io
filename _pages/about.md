@@ -64,19 +64,39 @@ redirect_from:
   </p>
   <div class="research-pillars">
     <div class="research-pillar">
-      <div class="pillar-icon">🎯</div>
+      <div class="pillar-icon-wrap pillar-icon-wrap--purple"><i class="ti ti-brain" aria-hidden="true"></i></div>
       <div class="pillar-title">Personalized AI &amp; RAG</div>
-      <div class="pillar-desc">User-specific memory, preference alignment, personalized retrieval</div>
+      <div class="pillar-desc">Memory systems that retain what matters to each user — selective, preference-aware, compact.</div>
+      <div class="pillar-chips">
+        <span class="pillar-chip">preference alignment</span>
+        <span class="pillar-chip">memory construction</span>
+        <span class="pillar-chip">retrieval</span>
+      </div>
+      <div class="pillar-paper"><i class="ti ti-file-text"></i> EPIC · ICML 2026</div>
+      <div class="pillar-bar"></div>
     </div>
     <div class="research-pillar">
-      <div class="pillar-icon">⚡</div>
+      <div class="pillar-icon-wrap pillar-icon-wrap--teal"><i class="ti ti-cpu" aria-hidden="true"></i></div>
       <div class="pillar-title">On-Device AI</div>
-      <div class="pillar-desc">Efficient LLM inference under tight resource budgets</div>
+      <div class="pillar-desc">Pushing LLM capabilities to consumer devices — tight budgets, real users, no cloud.</div>
+      <div class="pillar-chips">
+        <span class="pillar-chip">edge inference</span>
+        <span class="pillar-chip">efficiency</span>
+        <span class="pillar-chip">resource-aware</span>
+      </div>
+      <div class="pillar-bar"></div>
     </div>
     <div class="research-pillar">
-      <div class="pillar-icon">🤖</div>
+      <div class="pillar-icon-wrap pillar-icon-wrap--amber"><i class="ti ti-device-mobile" aria-hidden="true"></i></div>
       <div class="pillar-title">AI Agents &amp; Memory</div>
-      <div class="pillar-desc">Compact memory for GUI agents, long-horizon planning</div>
+      <div class="pillar-desc">Compact, reusable memory for GUI agents that act efficiently on mobile devices.</div>
+      <div class="pillar-chips">
+        <span class="pillar-chip">GUI agents</span>
+        <span class="pillar-chip">action reuse</span>
+        <span class="pillar-chip">mobile</span>
+      </div>
+      <div class="pillar-paper"><i class="ti ti-file-text"></i> ΔAgent · in preparation</div>
+      <div class="pillar-bar"></div>
     </div>
   </div>
 </section>
