@@ -46,7 +46,7 @@
   ];
 
   var steps = [
-    { pct: 10,  msg: 'Waking up one sleep-deprived researcher…' },
+    { pct: 10,  msg: 'Retrieving Changmin from distributed memory…' },
     { pct: 28,  msg: 'Compressing 3 years of work (2,404× ratio)…' },
     { pct: 46,  msg: 'Fetching paper acceptance emails…' },
     { pct: 64,  msg: 'Preference-aligning your visit…' },
