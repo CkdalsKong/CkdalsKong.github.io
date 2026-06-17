@@ -58,10 +58,6 @@ redirect_from:
   <blockquote class="research-statement">
     I build AI systems that are personal, efficient, and deployable on the edge.
   </blockquote>
-  <p class="research-bio">
-    M.S.-Ph.D. student in CSE at UNIST UAI Lab, advised by Prof. Taesik Gong.
-    My work focuses on personalized RAG, efficient on-device LLM inference, and memory-aware AI agents.
-  </p>
   <div class="research-pillars">
     <div class="research-pillar">
       <div class="pillar-icon-wrap pillar-icon-wrap--purple"><i class="ti ti-brain" aria-hidden="true"></i></div>
