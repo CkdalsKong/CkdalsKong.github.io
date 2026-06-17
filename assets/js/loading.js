@@ -21,10 +21,10 @@
   ];
 
   var positions = [
-    {top:'7%', left:'3%'},   {top:'9%',  left:'58%'},  {top:'6%',  left:'32%'},
-    {top:'20%',left:'74%'},  {top:'30%', left:'1%'},   {top:'68%', left:'2%'},
-    {top:'80%',left:'62%'},  {top:'83%', left:'28%'},  {top:'70%', left:'76%'},
-    {top:'56%',left:'80%'},  {top:'42%', left:'79%'},  {top:'44%', left:'0%'},
+    {top:'7%',  left:'3%'},   {top:'9%',  left:'60%'},  {top:'6%',  left:'33%'},
+    {top:'20%', left:'75%'},  {top:'32%', left:'1%'},   {top:'68%', left:'2%'},
+    {top:'80%', left:'60%'},  {top:'83%', left:'26%'},  {top:'70%', left:'77%'},
+    {top:'56%', left:'81%'},  {top:'43%', left:'80%'},  {top:'44%', left:'0%'},
   ];
 
   var steps = [
@@ -36,7 +36,7 @@
     { pct: 100, msg: '✦  Welcome.' },
   ];
 
-  var els = frags.map(function(f, i) {
+  var els = frags.map(function (f, i) {
     var el = document.createElement('span');
     el.className = 'cm-frag';
     el.innerHTML = f.icon + ' ' + f.text;
@@ -52,6 +52,19 @@
     if (fragIdx < els.length) { els[fragIdx++].classList.add('in'); }
   }
 
+  function convergeAll() {
+    // move each fragment toward the viewport center
+    var cx = window.innerWidth  / 2;
+    var cy = window.innerHeight / 2;
+    els.forEach(function (el) {
+      var rect = el.getBoundingClientRect();
+      var dx = cx - (rect.left + rect.width  / 2);
+      var dy = cy - (rect.top  + rect.height / 2);
+      el.style.transform = 'translate(' + dx + 'px, ' + dy + 'px) scale(0.5)';
+      el.classList.add('converge');
+    });
+  }
+
   var stepIdx = 0;
   function tick() {
     if (stepIdx >= steps.length) return;
@@ -62,13 +75,13 @@
     if (stepIdx < steps.length) {
       setTimeout(tick, 420);
     } else {
-      setTimeout(function() {
-        els.forEach(function(e){ e.classList.add('out'); });
-        setTimeout(function() {
+      setTimeout(function () {
+        convergeAll();
+        setTimeout(function () {
           loader.classList.add('done');
-          setTimeout(function(){ loader.remove(); }, 750);
-        }, 350);
-      }, 550);
+          setTimeout(function () { loader.remove(); }, 700);
+        }, 500);
+      }, 400);
     }
   }
 
