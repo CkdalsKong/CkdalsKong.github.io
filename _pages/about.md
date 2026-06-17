@@ -16,7 +16,6 @@ redirect_from:
         <h1>Changmin Lee</h1>
         <p class="hero-subtitle">AI Research Engineer &nbsp;·&nbsp; M.S.-Ph.D. @ <strong>UNIST</strong></p>
         <p class="hero-lab"><a href="https://sites.google.com/view/uailab?pli=1" target="_blank" rel="noopener noreferrer">UAI Lab</a> &nbsp;·&nbsp; Advisor: <a href="https://taesikgong.com/" target="_blank" rel="noopener noreferrer">Prof. Taesik Gong</a></p>
-        <p class="hero-gpa">B.S. GPA 3.9 / 4.3 &nbsp;·&nbsp; Major 4.2 / 4.3</p>
         <p class="typed-wrapper">
           I work on <span class="typed-text"></span><span class="typed-cursor">|</span>
         </p>
@@ -40,12 +39,12 @@ redirect_from:
       <span class="news-text">📝 Paper <strong>"From Volume to Value: Preference-Aligned Memory Construction for On-Device RAG"</strong> accepted to <strong>ICML 2026</strong>. <a href="/EPIC/" target="_blank" rel="noopener noreferrer">Project Page ↗</a></span>
     </div>
     <div class="news-item">
-      <span class="news-date">2025.03</span>
-      <span class="news-text">🎓 Joined <strong><a href="https://sites.google.com/view/uailab?pli=1" target="_blank" rel="noopener noreferrer">UAI Lab</a></strong> at UNIST as a graduate student (M.S.-Ph.D.).</span>
-    </div>
-    <div class="news-item">
       <span class="news-date">2025.08</span>
       <span class="news-text">🏆 Awarded <strong>NRF Master's Fellowship</strong> (석사과정생연구장려금지원).</span>
+    </div>
+    <div class="news-item">
+      <span class="news-date">2025.03</span>
+      <span class="news-text">🎓 Joined <strong><a href="https://sites.google.com/view/uailab?pli=1" target="_blank" rel="noopener noreferrer">UAI Lab</a></strong> at UNIST as a graduate student (M.S.-Ph.D.).</span>
     </div>
     <div class="news-item">
       <span class="news-date">2024.11</span>
@@ -82,3 +81,73 @@ redirect_from:
   </div>
 </section>
 
+<section id="about" class="home-section" data-animate>
+  <h2>About</h2>
+
+  <h3 class="about-subsection-title">Experience</h3>
+
+  <div class="exp-card">
+    <div class="exp-header">
+      <img class="exp-logo" src="/images/logo-uai.png" alt="UAI Lab"/>
+      <div class="exp-meta">
+        <div class="exp-org"><a href="https://sites.google.com/view/uailab?pli=1" target="_blank" rel="noopener noreferrer">Ubiquitous AI Lab (UAI Lab)</a></div>
+        <div class="exp-role">Graduate Researcher</div>
+        <div class="exp-place">UNIST, Republic of Korea</div>
+      </div>
+      <div class="exp-period">2025.03 — Present</div>
+    </div>
+    <ul class="exp-bullets">
+      <li>Advisor: <a href="https://taesikgong.com/" target="_blank" rel="noopener noreferrer">Prof. Taesik Gong</a></li>
+      <li>Research on Personalized AI · On-Device AI · AI Agents &amp; Memory</li>
+    </ul>
+  </div>
+
+  <div class="exp-card">
+    <div class="exp-header">
+      <img class="exp-logo" src="/images/logo-prmi.png" alt="PRMI Lab"/>
+      <div class="exp-meta">
+        <div class="exp-org"><a href="https://sites.google.com/view/prmi-knu/home" target="_blank" rel="noopener noreferrer">Pattern Recognition &amp; Machine Intelligence Lab (PRMI)</a></div>
+        <div class="exp-role">Undergraduate Research Intern</div>
+        <div class="exp-place">Kyungpook National University, Republic of Korea</div>
+      </div>
+      <div class="exp-period">2024.01 — 2024.11</div>
+    </div>
+    <ul class="exp-bullets">
+      <li>Advisor: <a href="https://scholar.google.com/citations?user=9wo5l0QAAAAJ&hl=ko&oi=sra" target="_blank" rel="noopener noreferrer">Prof. Woo-Jeoung Nam</a></li>
+      <li>Research on Machine Learning · Explainable AI · Computer Vision &amp; Analysis</li>
+    </ul>
+  </div>
+
+  <h3 class="about-subsection-title">Education</h3>
+
+  <div class="edu-card-v2">
+    <div class="edu-header-v2">
+      <img class="edu-logo" src="/images/logo-unist.png" alt="UNIST"/>
+      <div class="edu-meta">
+        <div class="edu-inst">UNIST</div>
+        <div class="edu-degree">M.S.-Ph.D. in Computer Science and Engineering</div>
+        <div class="edu-place">Ulsan, Republic of Korea</div>
+      </div>
+      <div class="edu-period-v2">2025.03 — Present</div>
+    </div>
+    <ul class="edu-bullets">
+      <li>GPA: <strong>4.12 / 4.3</strong></li>
+    </ul>
+  </div>
+
+  <div class="edu-card-v2">
+    <div class="edu-header-v2">
+      <img class="edu-logo" src="/images/logo-knu.jpg" alt="Kyungpook National University"/>
+      <div class="edu-meta">
+        <div class="edu-inst">Kyungpook National University</div>
+        <div class="edu-degree">B.S. in Computer Science and Engineering</div>
+        <div class="edu-place">Daegu, Republic of Korea</div>
+      </div>
+      <div class="edu-period-v2">2019.02 — 2025.02</div>
+    </div>
+    <ul class="edu-bullets">
+      <li>GPA: <strong>3.83 / 4.3</strong> &nbsp;·&nbsp; Major GPA: <strong>4.07 / 4.3</strong></li>
+    </ul>
+  </div>
+
+</section>

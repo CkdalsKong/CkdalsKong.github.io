@@ -474,6 +474,103 @@ a:hover { text-decoration: underline; }
 }
 
 /* ============================================================
+   ABOUT SUBSECTION
+   ============================================================ */
+.about-subsection-title {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--fg);
+  margin: 1.75rem 0 0.85rem;
+  &:first-child { margin-top: 0; }
+}
+
+html.light-mode .about-subsection-title { color: $L-fg !important; }
+
+/* ============================================================
+   EXPERIENCE / EDUCATION CARDS
+   ============================================================ */
+.exp-card, .edu-card-v2 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  background: var(--card-bg);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1.25rem 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.exp-header, .edu-header-v2 {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.exp-logo, .edu-logo {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  border-radius: 8px;
+  flex-shrink: 0;
+  background: #fff;
+  padding: 4px;
+  border: 1px solid var(--line);
+}
+
+.exp-meta, .edu-meta {
+  flex: 1;
+  min-width: 0;
+}
+
+.exp-org, .edu-inst {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--fg);
+  a { color: inherit; text-decoration: none; &:hover { color: var(--accent); } }
+}
+
+.exp-role, .edu-degree {
+  font-size: 0.83rem;
+  color: var(--fg-2);
+  margin-top: 0.1rem;
+}
+
+.exp-place, .edu-place {
+  font-size: 0.78rem;
+  color: var(--fg-3);
+  margin-top: 0.1rem;
+}
+
+.exp-period, .edu-period-v2 {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--fg-3);
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding-top: 0.15rem;
+}
+
+.exp-bullets, .edu-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 calc(56px + 1rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+
+  li {
+    font-size: 0.82rem;
+    color: var(--fg-3);
+    padding-left: 1.1em;
+    position: relative;
+    &::before { content: "•"; position: absolute; left: 0; color: var(--accent); }
+    a { color: var(--accent); text-decoration: none; &:hover { text-decoration: underline; } }
+    strong { color: var(--fg-2); font-weight: 600; }
+  }
+}
+
+/* ============================================================
    EDUCATION
    ============================================================ */
 .edu-card {
@@ -950,6 +1047,20 @@ html.light-mode .skill-tag        { color: $L-fg2 !important; }
 
 html.light-mode .contact-card     { border-bottom-color: $L-line !important; strong { color: $L-fg3 !important; } span { color: $L-accent !important; } }
 
+html.light-mode .exp-card,
+html.light-mode .edu-card-v2      { border-color: $L-line !important; background: #fff !important; }
+html.light-mode .exp-org,
+html.light-mode .edu-inst         { color: $L-fg !important; }
+html.light-mode .exp-role,
+html.light-mode .edu-degree       { color: $L-fg2 !important; }
+html.light-mode .exp-place,
+html.light-mode .edu-place,
+html.light-mode .exp-period,
+html.light-mode .edu-period-v2    { color: $L-fg3 !important; }
+html.light-mode .exp-bullets li,
+html.light-mode .edu-bullets li   { color: $L-fg3 !important; }
+html.light-mode .exp-logo,
+html.light-mode .edu-logo         { border-color: $L-line !important; }
 html.light-mode .edu-card         { border-bottom-color: $L-line !important; }
 html.light-mode .edu-school       { color: $L-fg !important; }
 html.light-mode .edu-major        { color: $L-fg2 !important; }
