@@ -1034,7 +1034,7 @@ html.light-mode .research-bio       { color: $L-fg2 !important; }
 html.light-mode .pillar-title       { color: $L-fg !important; }
 html.light-mode .pillar-desc        { color: $L-fg3 !important; }
 html.light-mode .pillar-chip        { color: $L-fg3 !important; }
-html.light-mode .research-pillar    { background: #fff !important; border-color: $L-line !important; }
+html.light-mode .research-pillar    { background: transparent !important; border: none !important; }
 
 html.light-mode .research-tag {
   border-color: $L-line !important;

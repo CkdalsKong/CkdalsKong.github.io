@@ -1,6 +1,7 @@
 (function () {
   var loader = document.getElementById('cm-loader');
-  if (sessionStorage.getItem('cm-loaded')) {
+  var fromInternal = document.referrer && (new URL(document.referrer).origin === location.origin);
+  if (sessionStorage.getItem('cm-loaded') || fromInternal) {
     if (loader) loader.remove();
     return;
   }
