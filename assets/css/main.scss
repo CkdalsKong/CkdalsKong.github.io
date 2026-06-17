@@ -225,10 +225,6 @@ a:hover { text-decoration: underline; }
   &:hover { color: var(--fg) !important; }
 }
 
-@media (max-width: 640px) {
-  .site-header__nav { display: none; }
-  .site-header__menu-btn { display: flex; }
-}
 
 /* ============================================================
    SECTIONS
