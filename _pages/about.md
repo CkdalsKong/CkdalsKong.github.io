@@ -37,7 +37,7 @@ redirect_from:
   <div class="news-list">
     <div class="news-item news-item--highlight">
       <span class="news-date">2026.05</span>
-      <span class="news-text">📝 Paper <strong>"From Volume to Value: Preference-Aligned Memory Construction for On-Device RAG"</strong> accepted to <strong>ICML 2026</strong>. <a href="/EPIC/" target="_blank" rel="noopener noreferrer">🌐 page ↗</a></span>
+      <span class="news-text">📝 Paper <strong>"From Volume to Value: Preference-Aligned Memory Construction for On-Device RAG"</strong> accepted to <strong>ICML 2026</strong>. <a href="/EPIC/" target="_blank" rel="noopener noreferrer">Project Page ↗</a></span>
     </div>
     <div class="news-item">
       <span class="news-date">2025.08</span>
