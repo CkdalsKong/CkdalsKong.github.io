@@ -2,12 +2,11 @@
   <div class="cm-loader__bg"></div>
   <div class="cm-loader__fragments" id="cm-fragments"></div>
   <div class="cm-loader__center">
-    <div class="cm-loader__name">Changmin Lee</div>
-    <div class="cm-loader__label">retrieving memory<span class="cm-dots"></span></div>
+    <div class="cm-loader__name">CM<span class="cm-loader__name-dot">.</span></div>
     <div class="cm-loader__bar-wrap">
       <div class="cm-loader__bar" id="cm-bar"></div>
     </div>
-    <div class="cm-loader__status" id="cm-status">Initializing</div>
+    <div class="cm-loader__status" id="cm-status">Waking up one sleep-deprived researcher…</div>
   </div>
 </div>
 
@@ -41,32 +40,16 @@
 }
 
 .cm-loader__name {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: clamp(1.6rem, 5vw, 2.4rem);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: clamp(2.2rem, 7vw, 3.4rem);
   font-weight: 600;
   color: #fff;
-  letter-spacing: -0.01em;
-  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.2rem;
 }
 
-.cm-loader__label {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.7rem;
-  letter-spacing: 0.14em;
-  color: rgba(110,231,247,0.6);
-  margin-bottom: 1.4rem;
-}
-
-.cm-dots::after {
-  content: '';
-  animation: dots 1.2s steps(4, end) infinite;
-}
-@keyframes dots {
-  0%   { content: ''; }
-  25%  { content: '.'; }
-  50%  { content: '..'; }
-  75%  { content: '...'; }
-  100% { content: ''; }
+.cm-loader__name-dot {
+  color: #6ee7f7;
 }
 
 .cm-loader__bar-wrap {
@@ -147,12 +130,12 @@
   ];
 
   var steps = [
-    { pct: 12, msg: 'Loading profile' },
-    { pct: 28, msg: 'Retrieving publications' },
-    { pct: 48, msg: 'Fetching experience' },
-    { pct: 65, msg: 'Indexing research areas' },
-    { pct: 82, msg: 'Aligning preferences' },
-    { pct: 100, msg: 'Ready' },
+    { pct: 12,  msg: 'Waking up one sleep-deprived researcher…' },
+    { pct: 30,  msg: 'Compressing 3 years of research (2,404× ratio)…' },
+    { pct: 50,  msg: 'Retrieving paper acceptance emails…' },
+    { pct: 68,  msg: 'Preference-aligning your visit…' },
+    { pct: 85,  msg: 'Almost there — defragmenting memories…' },
+    { pct: 100, msg: '✦ Welcome.' },
   ];
 
   // positions: corners + sides, avoiding center
