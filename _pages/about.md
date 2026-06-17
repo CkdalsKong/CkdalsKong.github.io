@@ -40,6 +40,10 @@ redirect_from:
       <span class="news-text">📝 Paper <strong>"From Volume to Value: Preference-Aligned Memory Construction for On-Device RAG"</strong> accepted to <strong>ICML 2026</strong>. <a href="/EPIC/" target="_blank" rel="noopener noreferrer">Project Page ↗</a></span>
     </div>
     <div class="news-item">
+      <span class="news-date">2025.03</span>
+      <span class="news-text">🎓 Joined <strong><a href="https://sites.google.com/view/uailab?pli=1" target="_blank" rel="noopener noreferrer">UAI Lab</a></strong> at UNIST as a graduate student (M.S.-Ph.D.).</span>
+    </div>
+    <div class="news-item">
       <span class="news-date">2025.08</span>
       <span class="news-text">🏆 Awarded <strong>NRF Master's Fellowship</strong> (석사과정생연구장려금지원).</span>
     </div>

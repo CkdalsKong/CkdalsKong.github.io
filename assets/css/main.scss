@@ -412,6 +412,7 @@ a:hover { text-decoration: underline; }
 }
 
 .news-text {
+  font-family: var(--font-sans);
   font-size: 0.88rem;
   color: var(--fg-2);
   line-height: 1.6;
