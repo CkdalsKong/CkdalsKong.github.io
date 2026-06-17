@@ -2,11 +2,12 @@
   <div class="cm-loader__bg"></div>
   <div class="cm-loader__fragments" id="cm-fragments"></div>
   <div class="cm-loader__center">
-    <div class="cm-loader__label">Retrieving memory</div>
+    <div class="cm-loader__name">Changmin Lee</div>
+    <div class="cm-loader__label">retrieving memory<span class="cm-dots"></span></div>
     <div class="cm-loader__bar-wrap">
       <div class="cm-loader__bar" id="cm-bar"></div>
     </div>
-    <div class="cm-loader__status" id="cm-status">Initializing...</div>
+    <div class="cm-loader__status" id="cm-status">Initializing</div>
   </div>
 </div>
 
@@ -18,184 +19,193 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #0d0f1f;
-  transition: opacity 0.6s ease;
+  background: #080b18;
+  opacity: 1;
+  transition: opacity 0.7s ease;
 }
-
-#cm-loader.cm-loader--fade {
-  opacity: 0;
-  pointer-events: none;
-}
+#cm-loader.done { opacity: 0; pointer-events: none; }
 
 .cm-loader__bg {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 50% 50%, rgba(59,74,200,0.12) 0%, transparent 70%);
+  background:
+    radial-gradient(ellipse 60% 50% at 30% 40%, rgba(59,74,200,0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 70% 65%, rgba(110,231,247,0.08) 0%, transparent 55%);
 }
 
 .cm-loader__center {
   position: relative;
   z-index: 2;
   text-align: center;
-  width: min(340px, 80vw);
+  width: min(380px, 82vw);
+}
+
+.cm-loader__name {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: clamp(1.6rem, 5vw, 2.4rem);
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.5rem;
 }
 
 .cm-loader__label {
   font-family: "IBM Plex Mono", monospace;
-  font-size: 0.72rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.35);
-  margin-bottom: 1.1rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  color: rgba(110,231,247,0.6);
+  margin-bottom: 1.4rem;
+}
+
+.cm-dots::after {
+  content: '';
+  animation: dots 1.2s steps(4, end) infinite;
+}
+@keyframes dots {
+  0%   { content: ''; }
+  25%  { content: '.'; }
+  50%  { content: '..'; }
+  75%  { content: '...'; }
+  100% { content: ''; }
 }
 
 .cm-loader__bar-wrap {
   width: 100%;
-  height: 2px;
-  background: rgba(255,255,255,0.08);
-  border-radius: 2px;
+  height: 3px;
+  background: rgba(255,255,255,0.07);
+  border-radius: 99px;
   overflow: hidden;
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.75rem;
 }
 
 .cm-loader__bar {
   height: 100%;
   width: 0%;
-  background: linear-gradient(90deg, #3b4ac8, #6ee7f7);
-  border-radius: 2px;
-  transition: width 0.12s ease;
-  box-shadow: 0 0 8px rgba(110,231,247,0.5);
+  background: linear-gradient(90deg, #3b4ac8 0%, #6ee7f7 100%);
+  border-radius: 99px;
+  box-shadow: 0 0 10px rgba(110,231,247,0.6);
+  transition: width 0.4s cubic-bezier(.4,0,.2,1);
 }
 
 .cm-loader__status {
   font-family: "IBM Plex Mono", monospace;
-  font-size: 0.68rem;
-  color: rgba(255,255,255,0.25);
-  letter-spacing: 0.05em;
-  min-height: 1.2em;
+  font-size: 0.65rem;
+  color: rgba(255,255,255,0.22);
+  letter-spacing: 0.04em;
 }
 
 /* ── Fragment chips ── */
 .cm-loader__fragments {
   position: absolute;
   inset: 0;
-  pointer-events: none;
   overflow: hidden;
+  pointer-events: none;
 }
 
 .cm-frag {
   position: absolute;
   display: inline-flex;
   align-items: center;
-  gap: 0.35em;
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.72rem;
-  color: rgba(255,255,255,0.7);
-  background: rgba(59,74,200,0.18);
-  border: 1px solid rgba(59,74,200,0.35);
-  border-radius: 6px;
-  padding: 0.3em 0.7em;
+  gap: 0.4em;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.82);
+  background: rgba(59,74,200,0.22);
+  border: 1px solid rgba(100,130,255,0.3);
+  border-radius: 999px;
+  padding: 0.32em 0.85em;
   white-space: nowrap;
   opacity: 0;
-  transform: scale(0.85);
-  transition: opacity 0.4s ease, transform 0.5s ease;
+  transition: opacity 0.45s ease, transform 0.5s cubic-bezier(.2,1,.4,1);
 }
-
-.cm-frag.cm-frag--in {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.cm-frag.cm-frag--out {
-  opacity: 0;
-  transform: scale(0.9) translateY(-6px);
-  transition: opacity 0.35s ease, transform 0.35s ease;
-}
+.cm-frag.in  { opacity: 1; }
+.cm-frag.out { opacity: 0; transform: translateY(-8px) scale(0.93); transition: opacity 0.3s ease, transform 0.3s ease; }
 </style>
 
 <script>
 (function () {
   var loader = document.getElementById('cm-loader');
-  if (!loader) return;
+  var bar    = document.getElementById('cm-bar');
+  var status = document.getElementById('cm-status');
+  var pool   = document.getElementById('cm-fragments');
+  if (!loader || !bar || !status || !pool) return;
 
-  var fragments = [
+  var frags = [
     { icon: '📄', text: 'EPIC · ICML 2026' },
     { icon: '🔬', text: 'On-Device RAG' },
-    { icon: '🎓', text: 'UNIST · UAI Lab' },
+    { icon: '🎓', text: 'UAI Lab · UNIST' },
     { icon: '⚡', text: 'On-Device AI' },
     { icon: '🏆', text: 'NRF Fellowship' },
-    { icon: '🤖', text: 'AI Agents & Memory' },
+    { icon: '🤖', text: 'AI Agents' },
     { icon: '🎯', text: 'Personalized AI' },
-    { icon: '💻', text: 'github.com/UbiquitousAILab' },
     { icon: '📊', text: '2,404× memory reduction' },
     { icon: '🏅', text: 'Outstanding Paper Award' },
     { icon: '🧠', text: 'Preference-Aligned Memory' },
     { icon: '📱', text: 'ΔAgent · Mobile GUI' },
+    { icon: '💡', text: 'Edge Intelligence' },
   ];
 
   var steps = [
-    { pct: 15,  msg: 'Loading profile...' },
-    { pct: 35,  msg: 'Retrieving publications...' },
-    { pct: 55,  msg: 'Fetching experience...' },
-    { pct: 72,  msg: 'Indexing research areas...' },
-    { pct: 88,  msg: 'Aligning preferences...' },
-    { pct: 100, msg: 'Ready.' },
+    { pct: 12, msg: 'Loading profile' },
+    { pct: 28, msg: 'Retrieving publications' },
+    { pct: 48, msg: 'Fetching experience' },
+    { pct: 65, msg: 'Indexing research areas' },
+    { pct: 82, msg: 'Aligning preferences' },
+    { pct: 100, msg: 'Ready' },
   ];
 
-  var bar    = document.getElementById('cm-bar');
-  var status = document.getElementById('cm-status');
-  var pool   = document.getElementById('cm-fragments');
+  // positions: corners + sides, avoiding center
+  var positions = [
+    { top:'8%',  left:'4%'  }, { top:'8%',  left:'55%' }, { top:'8%',  left:'30%' },
+    { top:'18%', left:'72%' }, { top:'28%', left:'2%'  }, { top:'72%', left:'3%'  },
+    { top:'78%', left:'60%' }, { top:'82%', left:'30%' }, { top:'68%', left:'75%' },
+    { top:'55%', left:'80%' }, { top:'40%', left:'78%' }, { top:'42%', left:'1%'  },
+  ];
 
-  // place fragments at random positions
-  var placed = fragments.map(function (f, i) {
+  var els = frags.map(function (f, i) {
     var el = document.createElement('span');
     el.className = 'cm-frag';
     el.innerHTML = '<span>' + f.icon + '</span><span>' + f.text + '</span>';
-    var side = Math.random();
-    var top, left;
-    if (side < 0.25)      { top = (5  + Math.random() * 35) + '%'; left = (2  + Math.random() * 18) + '%'; }
-    else if (side < 0.5)  { top = (5  + Math.random() * 35) + '%'; left = (78 + Math.random() * 18) + '%'; }
-    else if (side < 0.75) { top = (62 + Math.random() * 30) + '%'; left = (5  + Math.random() * 35) + '%'; }
-    else                  { top = (62 + Math.random() * 30) + '%'; left = (58 + Math.random() * 35) + '%'; }
-    el.style.top  = top;
-    el.style.left = left;
+    var p = positions[i % positions.length];
+    el.style.top  = p.top;
+    el.style.left = p.left;
     pool.appendChild(el);
     return el;
   });
 
-  var stepIdx = 0;
-  var fragIdx = 0;
-
-  function showNextFrag() {
-    if (fragIdx < placed.length) {
-      placed[fragIdx].classList.add('cm-frag--in');
-      fragIdx++;
+  var fragShown = 0;
+  function popFrag() {
+    if (fragShown < els.length) {
+      els[fragShown].classList.add('in');
+      fragShown++;
     }
   }
 
-  function runStep(i) {
-    if (i >= steps.length) return;
-    var s = steps[i];
-    setTimeout(function () {
-      bar.style.width = s.pct + '%';
-      status.textContent = s.msg;
-      showNextFrag();
-      showNextFrag();
-      if (i < steps.length - 1) {
-        runStep(i + 1);
-      } else {
-        // fade out
+  var stepIdx = 0;
+  function tick() {
+    if (stepIdx >= steps.length) return;
+    var s = steps[stepIdx];
+    bar.style.width  = s.pct + '%';
+    status.textContent = s.msg;
+    popFrag(); popFrag();
+    stepIdx++;
+    if (stepIdx < steps.length) {
+      setTimeout(tick, stepIdx === 1 ? 300 : 380);
+    } else {
+      setTimeout(function () {
+        els.forEach(function (e) { e.classList.add('out'); });
         setTimeout(function () {
-          placed.forEach(function (el) { el.classList.add('cm-frag--out'); });
-          setTimeout(function () {
-            loader.classList.add('cm-loader--fade');
-            setTimeout(function () { loader.style.display = 'none'; }, 650);
-          }, 300);
-        }, 400);
-      }
-    }, i === 0 ? 200 : 350 + Math.random() * 150);
+          loader.classList.add('done');
+          setTimeout(function () { loader.remove(); }, 750);
+        }, 350);
+      }, 500);
+    }
   }
 
-  runStep(0);
+  // start after fonts have a chance to load
+  window.addEventListener('DOMContentLoaded', function () { setTimeout(tick, 250); });
+  // fallback in case DOMContentLoaded already fired
+  if (document.readyState !== 'loading') setTimeout(tick, 250);
 })();
 </script>
