@@ -1,8 +1,13 @@
 (function () {
+  var loader = document.getElementById('cm-loader');
+  if (sessionStorage.getItem('cm-loaded')) {
+    if (loader) loader.remove();
+    return;
+  }
+
   var bar    = document.getElementById('cm-bar');
   var status = document.getElementById('cm-status');
   var pool   = document.getElementById('cm-fragments');
-  var loader = document.getElementById('cm-loader');
   if (!loader || !bar || !status || !pool) return;
 
   var frags = [
@@ -79,6 +84,7 @@
         convergeAll();
         setTimeout(function () {
           loader.classList.add('done');
+          sessionStorage.setItem('cm-loaded', '1');
           setTimeout(function () { loader.remove(); }, 700);
         }, 500);
       }, 400);

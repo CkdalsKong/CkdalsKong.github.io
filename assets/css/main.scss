@@ -32,11 +32,11 @@
    TOKENS — Dark (default)
    ============================================================ */
 :root {
-  --bg:       #111;
-  --fg:       #ececec;
-  --fg-2:     #b0b0b0;
-  --fg-3:     #787878;
-  --line:     #2e2e2e;
+  --bg:       #181c2e;
+  --fg:       #e8eaf6;
+  --fg-2:     #a8adc8;
+  --fg-3:     #6b7099;
+  --line:     #2a2f4a;
   --accent:   #6366f1;
   --accent-bg: rgba(99,102,241,0.1);
 
@@ -49,7 +49,7 @@
   --tr:    0.2s ease;
 
   /* override template vars for dark mode */
-  --global-bg-color:   #111;
+  --global-bg-color:   #181c2e;
   --global-text-color: #ececec;
   --global-link-color: #6366f1;
 }
@@ -450,48 +450,21 @@ a:hover { text-decoration: underline; }
 }
 
 .research-pillar {
-  background: var(--card-bg, #fff);
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 1.25rem 1.25rem 1rem;
-  position: relative;
-  overflow: hidden;
-  transition: border-color 0.2s;
-
-  &:hover { border-color: var(--accent); }
-  &:hover .pillar-bar { width: 100%; }
-  &:hover .pillar-paper { opacity: 1; }
-  &:hover .pillar-icon-wrap i { color: inherit; }
-
   .pillar-icon-wrap {
-    width: 38px; height: 38px;
+    width: 36px; height: 36px;
     border-radius: 9px;
     display: flex; align-items: center; justify-content: center;
-    margin-bottom: 0.9rem;
-    i { font-size: 18px; transition: color 0.2s; }
-    &--purple { background: rgba(59,74,200,0.1); i { color: var(--accent); } }
-    &--teal    { background: rgba(15,110,86,0.1);  i { color: #0f6e56; } }
-    &--amber   { background: rgba(133,79,11,0.1);  i { color: #854f0b; } }
+    margin-bottom: 0.5rem;
+    i { font-size: 18px; }
+    &--purple { background: rgba(59,74,200,0.12); i { color: var(--accent); } }
+    &--teal    { background: rgba(15,110,86,0.12);  i { color: #1d9e75; } }
+    &--amber   { background: rgba(186,117,23,0.12); i { color: #ba7517; } }
   }
-
-  .pillar-title { font-family: var(--font-sans); font-size: 0.88rem; font-weight: 600; color: var(--fg); margin-bottom: 0.35rem; }
-  .pillar-desc  { font-family: var(--font-sans); font-size: 0.78rem; color: var(--fg-3); line-height: 1.6; margin-bottom: 0.75rem; }
-
-  .pillar-chips { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 0.5rem; }
-  .pillar-chip  { font-family: var(--font-sans); font-size: 0.68rem; color: var(--fg-3); background: var(--accent-light); border-radius: 99px; padding: 2px 8px; }
-
-  .pillar-paper {
-    font-family: var(--font-sans); font-size: 0.72rem; color: var(--accent);
-    opacity: 0; transition: opacity 0.2s;
-    i { font-size: 0.72rem; vertical-align: -1px; margin-right: 3px; }
-  }
-
-  .pillar-bar {
-    position: absolute; bottom: 0; left: 0;
-    height: 2px; width: 0%;
-    background: var(--accent);
-    transition: width 0.35s ease;
-  }
+  .pillar-title { font-size: 0.82rem; font-weight: 600; color: var(--fg); margin-bottom: 0.25rem; }
+  .pillar-desc  { font-size: 0.76rem; color: var(--fg-3); line-height: 1.55; }
+  .pillar-chips { display: none; }
+  .pillar-paper { display: none; }
+  .pillar-bar   { display: none; }
 }
 
 .research-tags {
