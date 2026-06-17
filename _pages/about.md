@@ -14,7 +14,7 @@ redirect_from:
       <img class="hero-photo" src="/images/profile.png" alt="Changmin Lee" width="128" height="128"/>
       <div class="hero-content">
         <h1>Changmin Lee</h1>
-        <p class="hero-subtitle">AI Research Engineer &nbsp;·&nbsp; M.S.-Ph.D. @ <strong>UNIST</strong></p>
+        <p class="hero-subtitle">AI Research Engineer &nbsp;·&nbsp;<br>M.S.-Ph.D. @ <strong>UNIST</strong></p>
         <p class="hero-lab"><a href="https://sites.google.com/view/uailab?pli=1" target="_blank" rel="noopener noreferrer">UAI Lab</a> &nbsp;·&nbsp; Advisor: <a href="https://taesikgong.com/" target="_blank" rel="noopener noreferrer">Prof. Taesik Gong</a></p>
         <p class="typed-wrapper">
           I work on <span class="typed-text"></span><span class="typed-cursor">|</span>

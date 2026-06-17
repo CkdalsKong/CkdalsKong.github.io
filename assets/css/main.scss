@@ -1110,20 +1110,28 @@ html.light-mode .back-link         { color: $L-fg3 !important; }
    RESPONSIVE
    ============================================================ */
 @media (max-width: 640px) {
-  .hero-section { padding: 3rem var(--pad) 2.5rem !important; }
-
+  /* hero */
+  .hero-section { padding: 1.75rem var(--pad) 2rem !important; }
   .hero-inner { flex-direction: column; align-items: center; gap: 1rem; text-align: center; }
-
   .hero-photo { width: 96px; height: 96px; }
-
   .hero-content h1 { font-size: 1.6rem; }
-
   .hero-subtitle,
   .hero-lab { font-family: var(--font-sans); font-size: 0.9rem; }
-
   .typed-wrapper { font-family: var(--font-sans); font-size: 0.9rem; }
-
   .quick-links { justify-content: center; }
+
+  /* nav: show links directly, hide hamburger */
+  .site-header__nav { display: flex !important; gap: 0.25rem; }
+  .site-header__menu-btn { display: none !important; }
+  .mobile-nav { display: none !important; }
+
+  /* exp/edu cards: wrap period to its own row */
+  .exp-header, .edu-header-v2 { flex-wrap: wrap; }
+  .exp-period, .edu-period-v2 {
+    width: 100%;
+    padding-left: calc(48px + 0.9rem);
+    padding-top: 0.1rem;
+  }
 
   .news-item,
   .timeline-item,
@@ -1137,5 +1145,5 @@ html.light-mode .back-link         { color: $L-fg3 !important; }
 
   .research-pillars { grid-template-columns: 1fr; gap: 1rem; }
 
-  .home-section { padding: 2.5rem var(--pad); }
+  .home-section { padding: 2rem var(--pad); }
 }
