@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EPIC | ICML 2026</title>
+  <meta name="description" content="From Volume to Value: Preference-Aligned Memory Construction for On-Device RAG. ICML 2026.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f5f6fa;
+      --card: #ffffff;
+      --fg: #1a1f3c;
+      --fg2: #3d4473;
+      --fg3: #7b82b0;
+      --accent: #3b4ac8;
+      --accent-light: rgba(59,74,200,0.08);
+      --line: #e0e3f0;
+      --mono: "IBM Plex Mono", monospace;
+      --sans: "IBM Plex Sans", sans-serif;
+      --radius: 12px;
+      --shadow: 0 2px 16px rgba(59,74,200,0.07);
+    }
+
+    body {
+      font-family: var(--mono);
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.7;
+      padding: 3rem 1.25rem 5rem;
+    }
+
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    /* ── Header ── */
+    .venue-badge {
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-light);
+      border: 1px solid var(--accent);
+      padding: 0.25rem 0.75rem;
+      border-radius: 4px;
+      margin-bottom: 1.25rem;
+    }
+
+    .paper-title {
+      font-family: var(--sans);
+      font-size: clamp(1.4rem, 4vw, 2rem);
+      font-weight: 600;
+      line-height: 1.3;
+      color: var(--fg);
+      margin-bottom: 0.5rem;
+    }
+
+    .paper-abbr {
+      font-family: var(--mono);
+      font-size: clamp(2rem, 8vw, 3.5rem);
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    .authors {
+      font-size: 0.92rem;
+      color: var(--fg2);
+      margin-bottom: 2rem;
+    }
+
+    .authors strong {
+      color: var(--fg);
+      font-weight: 600;
+    }
+
+    /* ── Buttons ── */
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: var(--mono);
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 0.55rem 1.1rem;
+      border-radius: 6px;
+      border: 1.5px solid transparent;
+      transition: all 0.15s ease;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    .btn-primary:hover { background: #2d3aab; border-color: #2d3aab; }
+
+    .btn-outline {
+      background: var(--card);
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .btn-outline:hover { background: var(--accent-light); }
+
+    .btn-ghost {
+      background: var(--card);
+      color: var(--fg2);
+      border-color: var(--line);
+    }
+
+    .btn-ghost:hover { border-color: var(--fg3); color: var(--fg); }
+
+    .btn-disabled {
+      background: var(--bg);
+      color: var(--fg3);
+      border-color: var(--line);
+      cursor: default;
+      opacity: 0.7;
+    }
+
+    /* ── Cards ── */
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+      box-shadow: var(--shadow);
+    }
+
+    .card-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .tldr-text {
+      font-size: 0.95rem;
+      color: var(--fg);
+      line-height: 1.75;
+    }
+
+    .abstract-text {
+      font-size: 0.88rem;
+      color: var(--fg2);
+      line-height: 1.9;
+    }
+
+    /* ── Figure ── */
+    .figure-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      margin-bottom: 1.25rem;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .figure-card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .figure-caption {
+      font-size: 0.78rem;
+      color: var(--fg3);
+      margin-top: 0.75rem;
+      line-height: 1.6;
+    }
+
+    /* ── BibTeX ── */
+    .bibtex {
+      background: #f0f2fa;
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      font-size: 0.8rem;
+      color: var(--fg2);
+      line-height: 1.8;
+      overflow-x: auto;
+      white-space: pre;
+    }
+
+    /* ── Divider ── */
+    hr {
+      border: none;
+      border-top: 1px solid var(--line);
+      margin: 2rem 0;
+    }
+
+    /* ── Back link ── */
+    .back-link {
+      display: inline-block;
+      font-size: 0.8rem;
+      color: var(--fg3);
+      text-decoration: none;
+      margin-bottom: 2.5rem;
+      transition: color 0.15s;
+    }
+
+    .back-link:hover { color: var(--accent); }
+
+    @media (max-width: 540px) {
+      .btn { font-size: 0.8rem; padding: 0.5rem 0.85rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <a class="back-link" href="https://changmin-lee.com">← changmin-lee.com</a>
+
+  <div class="venue-badge">ICML 2026</div>
+
+  <div class="paper-abbr">EPIC</div>
+
+  <h1 class="paper-title">
+    From Volume to Value: Preference-Aligned Memory Construction for On-Device RAG
+  </h1>
+
+  <p class="authors">
+    <strong>Changmin Lee</strong> &nbsp;·&nbsp; Jaemin Kim &nbsp;·&nbsp; Taesik Gong<br>
+    UAI Lab, UNIST
+  </p>
+
+  <div class="buttons">
+    <a class="btn btn-primary" href="https://arxiv.org/abs/2605.18271" target="_blank" rel="noopener">
+      📄 arXiv
+    </a>
+    <a class="btn btn-outline" href="https://github.com/UbiquitousAILab/EPIC" target="_blank" rel="noopener">
+      💻 Code
+    </a>
+    <a class="btn btn-ghost" href="poster.pdf" target="_blank">
+      🖼 Poster
+    </a>
+    <!-- <a class="btn btn-ghost" href="#" target="_blank">🎬 Video</a> -->
+  </div>
+
+  <!-- TL;DR -->
+  <div class="card">
+    <div class="card-label">TL;DR</div>
+    <p class="tldr-text">
+      EPIC is a preference-aligned memory construction framework for on-device RAG that selectively retains preference-relevant information and aligns retrieval toward user preferences, achieving 18.79 pp higher accuracy with 2,404× lower memory usage and 32.17× lower latency than the best baseline.
+    </p>
+  </div>
+
+  <!-- Overview figure — replace src when ready -->
+  <!-- <div class="figure-card">
+    <img src="images/overview.png" alt="EPIC overview figure" />
+    <p class="figure-caption">Figure 1. Overview of the EPIC framework.</p>
+  </div> -->
+
+  <!-- Abstract -->
+  <div class="card">
+    <div class="card-label">Abstract</div>
+    <p class="abstract-text">
+      Retrieval-Augmented Generation (RAG) on personal devices requires managing memory under tight resource budgets while aligning with user-specific preferences. Existing approaches focus on volume-based memory management, retaining information based on recency or frequency, without considering what users actually prefer. We propose EPIC, a preference-aligned memory construction framework that selectively retains preference-relevant information and aligns retrieval toward user preferences. EPIC first identifies preference-relevant information from user interactions and constructs a compact preference-aligned memory. During retrieval, EPIC prioritizes memory entries that align with inferred user preferences. Experiments on four benchmarks show that EPIC improves preference-following accuracy by 18.79 percentage points on average while reducing memory usage by 2,404× and retrieval latency by 32.17× compared with the strongest baseline.
+    </p>
+  </div>
+
+  <!-- BibTeX -->
+  <div class="card">
+    <div class="card-label">BibTeX</div>
+    <div class="bibtex">@inproceedings{lee2026epic,
+  title     = {From Volume to Value: Preference-Aligned Memory
+               Construction for On-Device {RAG}},
+  author    = {Lee, Changmin and Kim, Jaemin and Gong, Taesik},
+  booktitle = {International Conference on Machine Learning},
+  year      = {2026}
+}</div>
+  </div>
+
+</div>
+</body>
+</html>
