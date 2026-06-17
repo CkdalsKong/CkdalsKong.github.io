@@ -15,7 +15,7 @@ redirect_from:
       <div class="hero-content">
         <h1>Changmin Lee</h1>
         <p class="hero-subtitle">AI Research Engineer &nbsp;·&nbsp; M.S.-Ph.D. @ <strong>UNIST</strong></p>
-        <p class="hero-lab">UAI Lab &nbsp;·&nbsp; Advisor: Prof. Taesik Gong</p>
+        <p class="hero-lab"><a href="https://sites.google.com/view/uailab?pli=1" target="_blank" rel="noopener noreferrer">UAI Lab</a> &nbsp;·&nbsp; Advisor: <a href="https://taesikgong.com/" target="_blank" rel="noopener noreferrer">Prof. Taesik Gong</a></p>
         <p class="hero-gpa">B.S. GPA 3.9 / 4.3 &nbsp;·&nbsp; Major 4.2 / 4.3</p>
         <p class="typed-wrapper">
           I work on <span class="typed-text"></span><span class="typed-cursor">|</span>

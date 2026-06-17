@@ -15,7 +15,7 @@ author_profile: false
   <div class="pub-card">
     <span class="venue-badge venue-top">ICML 2026</span>
     <div class="pub-title">From Volume to Value: Preference-Aligned Memory Construction for On-Device RAG</div>
-    <div class="pub-authors"><u>Changmin Lee</u>, Jaemin Kim, Taesik Gong</div>
+    <div class="pub-authors"><u>Changmin Lee</u>, <a href="https://jaemin-kim.com/" target="_blank" rel="noopener noreferrer">Jaemin Kim ↗</a>, Taesik Gong</div>
     <div class="pub-links">
       <a class="pub-btn" href="https://arxiv.org/abs/2605.18271" target="_blank" rel="noopener noreferrer">arXiv ↗</a>
       <a class="pub-btn" href="https://github.com/UbiquitousAILab/EPIC" target="_blank" rel="noopener noreferrer">Code ↗</a>
