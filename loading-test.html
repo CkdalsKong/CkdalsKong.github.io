@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Loading Test</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&family=Plus+Jakarta+Sans:wght@800&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; background: #f5f6fa; font-family: sans-serif; }
+
+    #cm-loader {
+      position: fixed; inset: 0; z-index: 9999;
+      display: flex; align-items: center; justify-content: center;
+      background: #f5f6fa;
+      opacity: 1; transition: opacity 0.65s ease;
+    }
+    #cm-loader.done { opacity: 0; pointer-events: none; }
+
+    .cm-loader__center {
+      position: relative; z-index: 2;
+      text-align: center; width: min(400px, 84vw);
+    }
+
+    .cm-loader__title {
+      font-family: "Plus Jakarta Sans", "IBM Plex Sans", sans-serif;
+      font-size: clamp(2rem, 6vw, 3rem);
+      font-weight: 800; color: #1a1f3c;
+      letter-spacing: -0.02em; margin-bottom: 0.4rem;
+    }
+
+    .cm-loader__sub {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.68rem; letter-spacing: 0.1em;
+      color: #7b82b0;
+      margin-bottom: 1.5rem;
+    }
+
+    .cm-blink { animation: blink 1s step-end infinite; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+    .cm-loader__bar-wrap {
+      width: 100%; height: 2px;
+      background: #e0e3f0;
+      border-radius: 99px; overflow: hidden;
+      margin-bottom: 0.8rem;
+    }
+
+    .cm-loader__bar {
+      height: 100%; width: 0%;
+      background: linear-gradient(90deg, #3b4ac8, #818cf8);
+      border-radius: 99px;
+      transition: width 0.45s cubic-bezier(.4,0,.2,1);
+    }
+
+    .cm-loader__status {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.65rem; color: #7b82b0;
+      letter-spacing: 0.04em; min-height: 1.2em;
+    }
+
+    .cm-loader__fragments { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+
+    .cm-frag {
+      position: absolute;
+      display: inline-flex; align-items: center; gap: 0.4em;
+      font-family: "IBM Plex Sans", sans-serif;
+      font-size: 0.72rem; font-weight: 500;
+      color: #3d4473;
+      background: #fff;
+      border: 1px solid #c8cce8;
+      border-radius: 999px;
+      padding: 0.3em 0.85em;
+      white-space: nowrap;
+      box-shadow: 0 2px 8px rgba(59,74,200,0.07);
+      opacity: 0;
+      transform: translateY(10px) scale(0.88);
+      transition: opacity 0.5s ease, transform 0.5s cubic-bezier(.2,1,.3,1);
+    }
+    .cm-frag.in { opacity: 1; transform: translateY(0) scale(1); }
+    .cm-frag.converge {
+      transition: opacity 0.5s ease, transform 0.55s cubic-bezier(.4,0,.6,1) !important;
+      opacity: 0 !important;
+    }
+  </style>
+</head>
+<body>
+
+<div id="cm-loader">
+  <div class="cm-loader__fragments" id="cm-fragments"></div>
+  <div class="cm-loader__center">
+    <div class="cm-loader__title">Loading Changmin Lee</div>
+    <div class="cm-loader__sub">fetching memories from the edge<span class="cm-blink">_</span></div>
+    <div class="cm-loader__bar-wrap">
+      <div class="cm-loader__bar" id="cm-bar"></div>
+    </div>
+    <div class="cm-loader__status" id="cm-status"></div>
+  </div>
+</div>
+
+<div style="padding:4rem;font-size:2rem;color:#1a1f3c;">← 메인 페이지</div>
+
+<script>
+(function () {
+  var bar    = document.getElementById('cm-bar');
+  var status = document.getElementById('cm-status');
+  var pool   = document.getElementById('cm-fragments');
+  var loader = document.getElementById('cm-loader');
+  if (!loader || !bar || !status || !pool) return;
+
+  var frags = [
+    { icon: '📄', text: 'EPIC · ICML 2026' },
+    { icon: '⚡', text: 'On-Device AI' },
+    { icon: '🎓', text: 'UAI Lab · UNIST' },
+    { icon: '🔬', text: 'Personalized RAG' },
+    { icon: '🏆', text: 'NRF Fellowship' },
+    { icon: '🤖', text: 'AI Agents & Memory' },
+    { icon: '📊', text: '2,404× memory reduction' },
+    { icon: '🏅', text: 'Outstanding Paper Award' },
+    { icon: '🧠', text: 'Preference-Aligned Memory' },
+    { icon: '📱', text: 'ΔAgent · Mobile GUI' },
+    { icon: '💡', text: 'Edge Intelligence' },
+    { icon: '🎯', text: 'Personalized AI' },
+  ];
+
+  var positions = [
+    {top:'7%',  left:'3%'},   {top:'9%',  left:'60%'},  {top:'6%',  left:'33%'},
+    {top:'20%', left:'75%'},  {top:'32%', left:'1%'},   {top:'68%', left:'2%'},
+    {top:'80%', left:'60%'},  {top:'83%', left:'26%'},  {top:'70%', left:'77%'},
+    {top:'56%', left:'81%'},  {top:'43%', left:'80%'},  {top:'44%', left:'0%'},
+  ];
+
+  var steps = [
+    { pct: 10,  msg: 'Waking up one sleep-deprived researcher…' },
+    { pct: 28,  msg: 'Compressing 3 years of work (2,404× ratio)…' },
+    { pct: 46,  msg: 'Fetching paper acceptance emails…' },
+    { pct: 64,  msg: 'Preference-aligning your visit…' },
+    { pct: 82,  msg: 'Almost there — defragmenting memories…' },
+    { pct: 100, msg: '✦  Welcome.' },
+  ];
+
+  var els = frags.map(function (f, i) {
+    var el = document.createElement('span');
+    el.className = 'cm-frag';
+    el.innerHTML = f.icon + ' ' + f.text;
+    var p = positions[i];
+    el.style.top  = p.top;
+    el.style.left = p.left;
+    pool.appendChild(el);
+    return el;
+  });
+
+  var fragIdx = 0;
+  function popFrag() {
+    if (fragIdx < els.length) { els[fragIdx++].classList.add('in'); }
+  }
+
+  function convergeAll() {
+    var cx = window.innerWidth  / 2;
+    var cy = window.innerHeight / 2;
+    els.forEach(function (el) {
+      var rect = el.getBoundingClientRect();
+      var dx = cx - (rect.left + rect.width  / 2);
+      var dy = cy - (rect.top  + rect.height / 2);
+      el.style.transform = 'translate(' + dx + 'px, ' + dy + 'px) scale(0.5)';
+      el.classList.add('converge');
+    });
+  }
+
+  var stepIdx = 0;
+  function tick() {
+    if (stepIdx >= steps.length) return;
+    var s = steps[stepIdx++];
+    bar.style.width    = s.pct + '%';
+    status.textContent = s.msg;
+    popFrag(); popFrag();
+    if (stepIdx < steps.length) {
+      setTimeout(tick, 420);
+    } else {
+      setTimeout(function () {
+        convergeAll();
+        setTimeout(function () {
+          loader.classList.add('done');
+          setTimeout(function () { loader.remove(); }, 700);
+        }, 500);
+      }, 400);
+    }
+  }
+
+  setTimeout(tick, 180);
+})();
+</script>
+</body>
+</html>
