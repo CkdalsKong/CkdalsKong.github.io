@@ -46,8 +46,11 @@
   ];
 
   var steps = [
-    { pct: 30,  msg: 'Retrieving Changmin from distributed memory…' },
-    { pct: 80,  msg: 'Almost there — defragmenting memories…' },
+    { pct: 10,  msg: 'Retrieving Changmin from distributed memory…' },
+    { pct: 28,  msg: '' },
+    { pct: 46,  msg: '' },
+    { pct: 64,  msg: '' },
+    { pct: 82,  msg: 'Almost there — defragmenting memories…' },
     { pct: 100, msg: '✦  Welcome.' },
   ];
 
