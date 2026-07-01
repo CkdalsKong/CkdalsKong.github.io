@@ -148,9 +148,6 @@ redirect_from:
       </div>
       <div class="edu-period-v2">2025.03 — Present</div>
     </div>
-    <ul class="edu-bullets">
-      <li>GPA: <strong>4.12 / 4.3</strong></li>
-    </ul>
   </div>
 
   <div class="edu-card-v2">
