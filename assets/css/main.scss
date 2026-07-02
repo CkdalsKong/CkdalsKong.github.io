@@ -664,6 +664,15 @@ a:hover { text-decoration: underline; }
 .venue-journal  { background: var(--accent-bg); color: var(--accent); }
 .venue-workshop { background: transparent; border: 1px solid var(--line); color: var(--fg-3); }
 
+.pub-card--top {
+  border-left: 3px solid var(--accent);
+  padding-left: 1rem;
+  background: var(--accent-bg);
+  border-radius: 0 6px 6px 0;
+  padding-top: 0.75rem;
+  padding-right: 0.75rem;
+}
+
 .pub-links { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.5rem; }
 
 .pub-btn {
@@ -1039,6 +1048,7 @@ html.light-mode .research-tag {
 
 html.light-mode .pub-section-label { color: $L-fg3 !important; }
 html.light-mode .pub-card          { border-bottom-color: $L-line !important; }
+html.light-mode .pub-card--top     { background: rgba(99,102,241,0.05) !important; border-left-color: #6366f1 !important; }
 html.light-mode .pub-title         { color: $L-fg !important; }
 html.light-mode .pub-authors       { color: $L-fg3 !important; u { color: $L-fg2 !important; } }
 html.light-mode .pub-note          { color: $L-fg3 !important; }

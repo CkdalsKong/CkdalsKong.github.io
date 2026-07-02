@@ -12,7 +12,7 @@ author_profile: false
 <section id="publications" class="home-section" data-animate>
   <h2>Publications</h2>
 
-  <div class="pub-card">
+  <div class="pub-card pub-card--top">
     <span class="venue-badge venue-top">ICML 2026</span>
     <div class="pub-title">From Volume to Value: Preference-Aligned Memory Construction for On-Device RAG</div>
     <div class="pub-authors"><u>Changmin Lee</u>, <a href="https://jaemin-kim.com/" target="_blank" rel="noopener noreferrer">Jaemin Kim ↗</a>, Taesik Gong</div>
