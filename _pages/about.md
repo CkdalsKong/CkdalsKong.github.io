@@ -122,7 +122,7 @@ redirect_from:
     <div class="exp-header">
       <img class="exp-logo" src="/images/logo-prmi.png" alt="PRMI Lab"/>
       <div class="exp-meta">
-        <div class="exp-org"><a href="https://sites.google.com/view/prmi-knu/home" target="_blank" rel="noopener noreferrer">PRMI Lab</a></div>
+        <div class="exp-org"><a href="https://sites.google.com/view/prmi-knu/home?authuser=0" target="_blank" rel="noopener noreferrer">PRMI Lab</a></div>
         <div class="exp-role">Undergraduate Research Intern</div>
         <div class="exp-place">Kyungpook National University · Daegu, Korea</div>
       </div>
