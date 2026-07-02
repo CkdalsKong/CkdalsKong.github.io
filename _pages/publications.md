@@ -11,9 +11,10 @@ author_profile: false
 
 <section id="publications" class="home-section" data-animate>
   <h2>Publications</h2>
+  <p class="pub-tier-note">⭐ <strong>Top Conf.</strong> — Top-tier CS conferences per <a href="https://csrankings.org/#/index?all&us" target="_blank" rel="noopener noreferrer">CSRankings</a>, <a href="https://drive.google.com/file/d/1Sp7z9dv8r1amM1i2MR2NwEY-ixieTp3x/view" target="_blank" rel="noopener noreferrer">KIISE S-Tier (2024)</a>, and <a href="https://drive.google.com/file/d/1XsYdYuOU5GXjHaUssPnCKthgSqZRwMjc/view" target="_blank" rel="noopener noreferrer">BK21 (2018)</a>.</p>
 
   <div class="pub-card pub-card--top">
-    <span class="venue-badge venue-top">ICML 2026</span>
+    <span class="venue-badge venue-top">⭐ Top Conf. &nbsp;·&nbsp; ICML 2026</span>
     <div class="pub-title">From Volume to Value: Preference-Aligned Memory Construction for On-Device RAG</div>
     <div class="pub-authors"><u>Changmin Lee</u>, <a href="https://jaemin-kim.com/" target="_blank" rel="noopener noreferrer">Jaemin Kim ↗</a>, Taesik Gong</div>
     <div class="pub-links">
