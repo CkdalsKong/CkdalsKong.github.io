@@ -27,10 +27,9 @@ author_profile: false
   </div>
 
   <div class="pub-card">
-    <span class="venue-badge venue-workshop">Under Preparation</span>
-    <div class="pub-title">ΔAgent: Efficient Mobile GUI Agents via Transition-Guided Flexible Action Reuse</div>
+    <span class="venue-badge venue-workshop">In Preparation</span>
+    <div class="pub-title">Topic: Efficient GUI Agents</div>
     <div class="pub-authors"><u>Changmin Lee</u>, Taehwan Park, Jongwon Lee, Taesik Gong</div>
-    <div class="pub-note">Transition-guided memory and flexible action reuse for efficient mobile GUI agents.</div>
   </div>
 
   <div class="pub-card">
