@@ -118,7 +118,6 @@ redirect_from:
     </ul>
   </div>
 
-  <!-- PRMI Lab card hidden for now
   <div class="exp-card">
     <div class="exp-header">
       <img class="exp-logo" src="/images/logo-prmi.png" alt="PRMI Lab"/>
@@ -134,7 +133,6 @@ redirect_from:
       <li>Research on Explainable AI · Computer Vision &amp; Analysis</li>
     </ul>
   </div>
-  -->
 
   <h3 class="about-subsection-title">Education</h3>
 
