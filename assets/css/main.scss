@@ -660,7 +660,14 @@ a:hover { text-decoration: underline; }
   border-radius: 3px;
 }
 
-.venue-top      { background: var(--accent-bg); color: var(--accent); }
+.venue-top {
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.72rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(99,102,241,0.5);
+}
 .venue-journal  { background: var(--accent-bg); color: var(--accent); }
 .venue-workshop { background: transparent; border: 1px solid var(--line); color: var(--fg-3); }
 
