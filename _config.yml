@@ -188,6 +188,8 @@ exclude:
   - package.json*
   - Rakefile
   - README
+  - REDESIGN_*.md
+  - TODO.md
   - tmp
   - vendor
 keep_files:

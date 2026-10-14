@@ -34,6 +34,10 @@ redirect_from:
 <section id="news" class="home-section" data-animate>
   <h2>News</h2>
   <div class="news-list">
+    <div class="news-item news-item--nota">
+      <span class="news-date">2026.10</span>
+      <span class="news-text">💼 Joined <a class="nota-pill" href="https://www.nota.ai/" target="_blank" rel="noopener noreferrer"><img src="/images/logo-nota-wordmark.png" alt="Nota AI" width="62" height="13"/></a> as a <strong>Quantization Engineer Intern</strong> on the NetsPresso Platform Team (Quantization Part).</span>
+    </div>
     <div class="news-item news-item--highlight">
       <span class="news-date">2026.05</span>
       <span class="news-text">📝 Paper <strong>"From Volume to Value: Preference-Aligned Memory Construction for On-Device RAG"</strong> accepted to <strong>ICML 2026</strong>. <a href="/EPIC/" target="_blank" rel="noopener noreferrer">Project Page ↗</a></span>
@@ -91,7 +95,7 @@ redirect_from:
         <span class="pillar-chip">action reuse</span>
         <span class="pillar-chip">mobile</span>
       </div>
-      <div class="pillar-paper"><i class="ti ti-file-text"></i> ΔAgent · in preparation</div>
+      <div class="pillar-paper"><i class="ti ti-file-text"></i> PastForward · arXiv 2026</div>
       <div class="pillar-bar"></div>
     </div>
   </div>
@@ -101,6 +105,22 @@ redirect_from:
   <h2>About</h2>
 
   <h3 class="about-subsection-title">Experience</h3>
+
+  <div class="exp-card exp-card--nota">
+    <div class="exp-header">
+      <img class="exp-logo" src="/images/logo-nota.png" alt="Nota AI"/>
+      <div class="exp-meta">
+        <div class="exp-org"><a href="https://www.nota.ai/" target="_blank" rel="noopener noreferrer">Nota AI</a></div>
+        <div class="exp-role">Quantization Engineer Intern</div>
+        <div class="exp-place">Seoul, Korea</div>
+      </div>
+      <div class="exp-period">2026.10 — Present</div>
+    </div>
+    <ul class="exp-bullets">
+      <li>Team: <strong>NetsPresso Platform Team</strong> · Quantization Part</li>
+      <li>Model quantization for <a href="https://netspresso.ai/" target="_blank" rel="noopener noreferrer">NetsPresso</a>, a hardware-aware AI model optimization platform</li>
+    </ul>
+  </div>
 
   <div class="exp-card">
     <div class="exp-header">

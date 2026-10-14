@@ -26,9 +26,17 @@ author_profile: false
   </div>
 
   <div class="pub-card">
-    <span class="venue-badge venue-workshop">In Preparation</span>
-    <div class="pub-title">Topic: Efficient GUI Agents</div>
-    <div class="pub-authors"><u>Changmin Lee</u>, Taehwan Park, Jongwon Lee, Taesik Gong</div>
+    <span class="venue-badge venue-preprint">Preprint 2026</span>
+    <div class="pub-title">PastForward: Faster On-Device GUI Agents via Computational Experience Reuse</div>
+    <div class="pub-authors">Taehwan Park<sup>*</sup>, <u>Changmin Lee</u><sup>*</sup>, Hayeon Lee, Taesik Gong</div>
+    <div class="pub-note"><sup>*</sup> Equal contribution</div>
+    <div class="pub-links">
+      <a class="pub-btn" href="https://arxiv.org/abs/2609.32166" target="_blank" rel="noopener noreferrer">arXiv ↗</a>
+    </div>
+    <button class="pub-abstract-toggle" type="button" data-target="abs-pastforward">Abstract ▼</button>
+    <div class="pub-abstract" id="abs-pastforward">
+      We present PastForward, a system that accelerates on-device GUI agents by reusing computational experience accumulated during ordinary task execution: it retrieves prior output sequences as multi-token proposals verified in a single VLM forward pass, and starts next-step inference from prior GUI transitions while the current action executes, achieving 1.63–2.36× action-step latency speedups on device while maintaining task success rates.
+    </div>
   </div>
 
   <div class="pub-card">
