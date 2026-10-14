@@ -416,26 +416,33 @@ a:hover { text-decoration: underline; }
   strong { color: var(--fg); font-weight: 600; }
 }
 
-/* Nota AI brand: blue #3264F0 · cyan #1BD2EB · navy #252A39 */
-.news-item--nota .news-date { color: #1BD2EB; }
-
-.nota-pill {
+/* Inline badges for highlighted news: venue (ICML) or organization logo (Nota AI) */
+.news-badge {
   display: inline-flex;
   align-items: center;
-  vertical-align: -0.3em;
-  height: 1.5em;
-  padding: 0 0.55em;
+  vertical-align: -0.28rem;
+  height: 1.3rem;
+  padding: 0 0.45rem;
   margin: 0 0.1em;
-  border-radius: 999px;
-  background: #252A39;
-  box-shadow: inset 0 0 0 1px rgba(27,210,235,0.35), 0 0 10px rgba(50,100,240,0.35);
-  transition: box-shadow var(--tr);
+  border-radius: 4px;
+  line-height: 1;
+}
 
-  img { display: block; height: 0.8em; width: auto; }
-  &:hover {
-    text-decoration: none;
-    box-shadow: inset 0 0 0 1px rgba(27,210,235,0.7), 0 0 14px rgba(27,210,235,0.45);
-  }
+.news-badge--venue {
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.news-badge--nota {
+  background: #252A39;  /* Nota AI navy */
+  transition: opacity var(--tr);
+
+  img { display: block; height: 0.7rem; width: auto; }
+  &:hover { opacity: 0.85; text-decoration: none; }
 }
 
 /* ============================================================
@@ -604,22 +611,25 @@ a:hover { text-decoration: underline; }
   }
 }
 
-.exp-card--nota {
+/* Ongoing roles: thin left bar in the organization's color (default: site accent) */
+.card--current {
   position: relative;
   overflow: hidden;
-  border-color: rgba(50,100,240,0.45);
-  background: linear-gradient(120deg, rgba(50,100,240,0.12) 0%, rgba(27,210,235,0.05) 45%, transparent 75%);
 
   &::before {
     content: "";
     position: absolute;
     left: 0; top: 0; bottom: 0;
     width: 3px;
-    background: linear-gradient(180deg, #3264F0, #1BD2EB);
+    background: var(--org-accent, var(--accent));
   }
+}
 
-  .exp-logo { padding: 0; background: #252A39; border-color: rgba(27,210,235,0.35); }
-  .exp-bullets li a { color: #1BD2EB; }
+/* Nota AI brand: blue #3264F0 · cyan #1BD2EB · navy #252A39 */
+.exp-card--nota {
+  --org-accent: linear-gradient(180deg, #3264F0, #1BD2EB);
+
+  .exp-logo { padding: 0; background: #252A39; }
 }
 
 /* ============================================================
@@ -1089,8 +1099,6 @@ html.light-mode .btn-link {
 
 html.light-mode .news-date         { color: $L-fg3 !important; }
 html.light-mode .news-text         { color: $L-fg2 !important; strong { color: $L-fg !important; } }
-html.light-mode .news-item--nota .news-date { color: #3264F0 !important; }
-html.light-mode .nota-pill         { box-shadow: 0 1px 6px rgba(50,100,240,0.3) !important; }
 
 html.light-mode .research-statement { color: $L-fg !important; }
 html.light-mode .research-bio       { color: $L-fg2 !important; }
@@ -1145,12 +1153,6 @@ html.light-mode .exp-bullets li,
 html.light-mode .edu-bullets li   { color: $L-fg3 !important; }
 html.light-mode .exp-logo,
 html.light-mode .edu-logo         { border-color: $L-line !important; }
-html.light-mode .exp-card.exp-card--nota {
-  border-color: rgba(50,100,240,0.35) !important;
-  background: linear-gradient(120deg, rgba(50,100,240,0.08) 0%, rgba(27,210,235,0.04) 45%, #fff 75%) !important;
-}
-html.light-mode .exp-card--nota .exp-logo         { border-color: rgba(50,100,240,0.3) !important; }
-html.light-mode .exp-card--nota .exp-bullets li a { color: #3264F0 !important; }
 html.light-mode .edu-card         { border-bottom-color: $L-line !important; }
 html.light-mode .edu-school       { color: $L-fg !important; }
 html.light-mode .edu-major        { color: $L-fg2 !important; }

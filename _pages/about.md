@@ -34,13 +34,13 @@ redirect_from:
 <section id="news" class="home-section" data-animate>
   <h2>News</h2>
   <div class="news-list">
-    <div class="news-item news-item--nota">
+    <div class="news-item news-item--highlight">
       <span class="news-date">2026.10</span>
-      <span class="news-text">💼 Joined <a class="nota-pill" href="https://www.nota.ai/" target="_blank" rel="noopener noreferrer"><img src="/images/logo-nota-wordmark.png" alt="Nota AI" width="62" height="13"/></a> as a <strong>Quantization Engineer Intern</strong> on the NetsPresso Platform Team (Quantization Part).</span>
+      <span class="news-text">💼 Joined <a class="news-badge news-badge--nota" href="https://www.nota.ai/" target="_blank" rel="noopener noreferrer"><img src="/images/logo-nota-wordmark.png" alt="Nota AI" width="54" height="11"/></a> as a <strong>Quantization Engineer Intern</strong> on the NetsPresso Platform Team (Quantization Part).</span>
     </div>
     <div class="news-item news-item--highlight">
       <span class="news-date">2026.05</span>
-      <span class="news-text">📝 Paper <strong>"From Volume to Value: Preference-Aligned Memory Construction for On-Device RAG"</strong> accepted to <strong>ICML 2026</strong>. <a href="/EPIC/" target="_blank" rel="noopener noreferrer">Project Page ↗</a></span>
+      <span class="news-text">📝 Paper <strong>"From Volume to Value: Preference-Aligned Memory Construction for On-Device RAG"</strong> accepted to <span class="news-badge news-badge--venue">ICML 2026</span>. <a href="/EPIC/" target="_blank" rel="noopener noreferrer">Project Page ↗</a></span>
     </div>
     <div class="news-item">
       <span class="news-date">2025.08</span>
@@ -106,7 +106,7 @@ redirect_from:
 
   <h3 class="about-subsection-title">Experience</h3>
 
-  <div class="exp-card exp-card--nota">
+  <div class="exp-card card--current exp-card--nota">
     <div class="exp-header">
       <img class="exp-logo" src="/images/logo-nota.png" alt="Nota AI"/>
       <div class="exp-meta">
@@ -122,7 +122,7 @@ redirect_from:
     </ul>
   </div>
 
-  <div class="exp-card">
+  <div class="exp-card card--current">
     <div class="exp-header">
       <img class="exp-logo" src="/images/logo-uai.png" alt="UAI Lab"/>
       <div class="exp-meta">
@@ -156,7 +156,7 @@ redirect_from:
 
   <h3 class="about-subsection-title">Education</h3>
 
-  <div class="edu-card-v2">
+  <div class="edu-card-v2 card--current">
     <div class="edu-header-v2">
       <img class="edu-logo" src="/images/logo-unist.png" alt="UNIST"/>
       <div class="edu-meta">
