@@ -59,6 +59,23 @@ author_profile: false
   </div>
 </section>
 
+<section id="patents" class="home-section" data-animate>
+  <h2>Patents</h2>
+  <div class="pub-card">
+    <span class="venue-badge venue-workshop">KR Patent Application 2026</span>
+    <div class="pub-title">Method and System for Accelerating Inference of On-Device GUI Agent by Reusing Computational Experience</div>
+    <div class="pub-authors">Taesik Gong, <u>Changmin Lee</u>, Taehwan Park</div>
+    <div class="pub-note">Republic of Korea Patent Application No. 10-2026-0220252 · Filed Nov. 6, 2026 · Based on PastForward</div>
+  </div>
+
+  <div class="pub-card">
+    <span class="venue-badge venue-workshop">KR Patent Application 2025</span>
+    <div class="pub-title">Preference-Based Index Management Method for Generating Personalized Search Responses and System Supporting the Same</div>
+    <div class="pub-authors">Taesik Gong, <u>Changmin Lee</u>, Jaemin Kim</div>
+    <div class="pub-note">Republic of Korea Patent Application No. 10-2025-0182629 · Filed Nov. 26, 2025 · Based on EPIC (ICML 2026)</div>
+  </div>
+</section>
+
 <section id="projects" class="home-section" data-animate>
   <h2>Projects</h2>
   <p class="projects-intro">Graduate and undergraduate work. PBL denotes <em>Project-Based Learning</em> program courses.</p>

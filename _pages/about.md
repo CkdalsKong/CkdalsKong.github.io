@@ -34,6 +34,10 @@ redirect_from:
 <section id="news" class="home-section" data-animate>
   <h2>News</h2>
   <div class="news-list">
+    <div class="news-item">
+      <span class="news-date">2026.11</span>
+      <span class="news-text">📄 Filed a Korean patent application on <strong>accelerating on-device GUI agents by reusing computational experience</strong>, based on PastForward. <a href="/publications/#patents">Patents →</a></span>
+    </div>
     <div class="news-item news-item--highlight">
       <span class="news-date">2026.10</span>
       <span class="news-text">💼 Joined <a class="news-badge news-badge--nota" href="https://www.nota.ai/" target="_blank" rel="noopener noreferrer"><img src="/images/logo-nota-wordmark.png" alt="Nota AI" width="54" height="11"/></a> as a <strong>Quantization Engineer Intern</strong> on the NetsPresso Platform Team (Quantization Part).</span>
